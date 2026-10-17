@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://b64t3yejfotgy"]
 
 [sub_resource type="StyleBoxFlat" id="PanelStyle"]
 bg_color = Color(0.08, 0.075, 0.065, 0.96)
@@ -9,17 +9,17 @@ border_width_bottom = 1
 border_color = Color(0.78, 0.65, 0.4, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
-corner_radius_bottom_left = 8
 corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
-[node name="LocationEventView" type="PanelContainer"]
+[node name="LocationEventView" type="PanelContainer" unique_id=1296440908]
 visible = false
 offset_right = 840.0
 offset_bottom = 140.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("PanelStyle")
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="." unique_id=251021098]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 16
@@ -27,31 +27,28 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 12
 
-[node name="Content" type="VBoxContainer" parent="Margin"]
+[node name="Content" type="VBoxContainer" parent="Margin" unique_id=965437731]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 6
 
-[node name="LocationName" type="Label" parent="Margin/Content"]
+[node name="LocationName" type="Label" parent="Margin/Content" unique_id=1432243588]
 layout_mode = 2
-mouse_filter = 2
 theme_override_colors/font_color = Color(1, 0.88, 0.6, 1)
 theme_override_font_sizes/font_size = 18
 
-[node name="Message" type="Label" parent="Margin/Content"]
+[node name="Message" type="Label" parent="Margin/Content" unique_id=678730285]
 custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 size_flags_vertical = 3
-mouse_filter = 2
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 2
 
-[node name="TimeLeft" type="Label" parent="Margin/Content"]
+[node name="TimeLeft" type="Label" parent="Margin/Content" unique_id=1961204026]
 layout_mode = 2
-mouse_filter = 2
 theme_override_font_sizes/font_size = 14
 
-[node name="LifetimeBar" type="ProgressBar" parent="Margin/Content"]
+[node name="LifetimeBar" type="ProgressBar" parent="Margin/Content" unique_id=42409367]
 custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 mouse_filter = 2

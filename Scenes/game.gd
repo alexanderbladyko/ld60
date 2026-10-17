@@ -23,5 +23,6 @@ func _center_game() -> void:
 
 func _process(delta: float) -> void:
 	ECS.process(delta, "input")
-	ECS.process(delta, "process")
 	ECS.process(delta, "events")
+	ECS.process(delta, "process")
+	ECS.process(delta, "cleanup")

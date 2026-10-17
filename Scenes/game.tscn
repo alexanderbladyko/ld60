@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b3vi2ingux88g" path="res://addons/gecs/lib/system_group.gd" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://d28bv3100oyve" path="res://Entities/e_dragon_cave_location.tscn" id="3_nnt18"]
 [ext_resource type="PackedScene" uid="uid://c0g3wmy8bbde7" path="res://Entities/e_castle_pin.tscn" id="3_o5yvi"]
-[ext_resource type="Script" uid="uid://bwiqdphygjwr5" path="res://Systems/s_cables_move.gd" id="4_3dryh"]
+[ext_resource type="Script" uid="uid://bwiqdphygjwr5" path="res://Systems/s_pin_selection.gd" id="4_3dryh"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="4_v158k"]
 [ext_resource type="Script" uid="uid://dryxapum6y7pr" path="res://Components/c_location.gd" id="5_ewbju"]
 [ext_resource type="Script" uid="uid://draem8dcb6tc2" path="res://Components/c_pin.gd" id="5_h4fw4"]
@@ -26,107 +26,112 @@
 [ext_resource type="Script" uid="uid://6p276u8av064" path="res://Systems/s_location_events.gd" id="21_location_events"]
 [ext_resource type="Script" uid="uid://16h3xr03a6qk" path="res://Systems/o_location_event.gd" id="22_event_observer"]
 [ext_resource type="Resource" uid="uid://ymmc2d6dk7en" path="res://Resources/Events/default_event_catalog.tres" id="23_event_catalog"]
-[ext_resource type="Script" uid="uid://cxaga5kx1toar" path="res://Systems/s_location_event_resolution.gd" id="24_event_resolution"]
+[ext_resource type="Script" uid="uid://cxaga5kx1toar" path="res://Systems/s_event_resolution.gd" id="24_event_resolution"]
 [ext_resource type="Script" uid="uid://bfm5wgrothxbo" path="res://Systems/s_lifetime.gd" id="25_lifetime"]
-[ext_resource type="PackedScene" path="res://Scenes/location_event_view.tscn" id="26_event_view"]
+[ext_resource type="PackedScene" uid="uid://b64t3yejfotgy" path="res://Scenes/location_event_view.tscn" id="26_event_view"]
+[ext_resource type="Script" uid="uid://byrgbcsk5p84o" path="res://Systems/s_resource_change.gd" id="27_resource_change"]
+[ext_resource type="Script" uid="uid://daljasdhm81xi" path="res://Systems/s_location_event_effects.gd" id="28_event_effects"]
+[ext_resource type="Script" uid="uid://ryhmlfycg4be" path="res://Systems/o_selected_pin.gd" id="29_selected_pin"]
+[ext_resource type="Script" uid="uid://b8hqjj1l8hi54" path="res://Systems/s_event_cleanup.gd" id="37_lmoi6"]
+[ext_resource type="Script" path="res://Systems/s_resource_trend.gd" id="38_resource_trend"]
 [ext_resource type="Script" uid="uid://batmyw1junnej" path="res://Components/c_food_resource.gd" id="stock_food"]
 [ext_resource type="Script" uid="uid://b4ernqwnkn3om" path="res://Components/c_gold_resource.gd" id="stock_gold"]
 [ext_resource type="Script" uid="uid://bhyh2oe35eflo" path="res://Components/c_mana_resource.gd" id="stock_mana"]
 [ext_resource type="Script" uid="uid://dcik8m7bkqdy8" path="res://Components/c_weapons_resource.gd" id="stock_weapons"]
 [ext_resource type="Script" uid="uid://dqrpmj4o7jsn0" path="res://Components/c_wood_resource.gd" id="stock_wood"]
 
-[sub_resource type="Resource" id="Resource_oeip8"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-
-[sub_resource type="Resource" id="Resource_xe308"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 4
-
-[sub_resource type="Resource" id="Resource_d3cha"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 3
-
-[sub_resource type="Resource" id="Resource_i26dy"]
-resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 3
-
-[sub_resource type="Resource" id="Resource_lmoi6"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 2
-
 [sub_resource type="Resource" id="Resource_6uxt2"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 1
 
 [sub_resource type="Resource" id="Resource_ym3tv"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
+script = ExtResource("5_h4fw4")
+location = 4
 
 [sub_resource type="Resource" id="Resource_bwj6o"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 4
+script = ExtResource("5_h4fw4")
+location = 3
 
 [sub_resource type="Resource" id="Resource_f3c8l"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 2
+location = 3
 
 [sub_resource type="Resource" id="Resource_bu0y5"]
+resource_local_to_scene = true
+script = ExtResource("5_h4fw4")
+location = 2
+
+[sub_resource type="Resource" id="Resource_6a4tp"]
+resource_local_to_scene = true
+script = ExtResource("5_h4fw4")
+location = 1
+
+[sub_resource type="Resource" id="Resource_631el"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+
+[sub_resource type="Resource" id="Resource_vs120"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 4
+
+[sub_resource type="Resource" id="Resource_v2cs8"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 2
+
+[sub_resource type="Resource" id="Resource_32sfa"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
 location = 1
 
-[sub_resource type="Resource" id="Resource_6a4tp"]
+[sub_resource type="Resource" id="Resource_titue"]
 resource_local_to_scene = true
 script = ExtResource("stock_food")
 
-[sub_resource type="Resource" id="Resource_631el"]
+[sub_resource type="Resource" id="Resource_tt7mg"]
 resource_local_to_scene = true
 script = ExtResource("stock_wood")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_vs120"]
+[sub_resource type="Resource" id="Resource_htg8p"]
 resource_local_to_scene = true
 script = ExtResource("stock_weapons")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_v2cs8"]
+[sub_resource type="Resource" id="Resource_jcvim"]
 resource_local_to_scene = true
 script = ExtResource("stock_mana")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_32sfa"]
+[sub_resource type="Resource" id="Resource_fnkle"]
 resource_local_to_scene = true
 script = ExtResource("stock_gold")
 resource = 4
 
-[sub_resource type="Resource" id="Resource_titue"]
+[sub_resource type="Resource" id="Resource_wr3wg"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 
-[sub_resource type="Resource" id="Resource_tt7mg"]
+[sub_resource type="Resource" id="Resource_6xvgv"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_htg8p"]
+[sub_resource type="Resource" id="Resource_8lpvs"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_jcvim"]
+[sub_resource type="Resource" id="Resource_x6jpx"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_fnkle"]
+[sub_resource type="Resource" id="Resource_sjh24"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 4
@@ -147,46 +152,46 @@ metadata/_custom_type_script = "uid://cdu5tlyk72uu4"
 
 [node name="CastlePin" parent="Entities" unique_id=861097526 instance=ExtResource("3_o5yvi")]
 position = Vector2(872, 552)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_oeip8")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6uxt2")])
 
 [node name="CityPin" parent="Entities" unique_id=524521090 instance=ExtResource("6_rku1e")]
 position = Vector2(137, 541)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_xe308")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_ym3tv")])
 
 [node name="DragonCavePin" parent="Entities" unique_id=1908340287 instance=ExtResource("7_rfjv2")]
 position = Vector2(514, 543)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_d3cha")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bwj6o")])
 
 [node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
 position = Vector2(970, 95)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_i26dy")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_f3c8l")])
 
 [node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
 position = Vector2(689, 548)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_lmoi6")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bu0y5")])
 
 [node name="VillagePin" parent="Entities" unique_id=2026254875 instance=ExtResource("9_nb51f")]
 position = Vector2(332, 539)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6uxt2")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6a4tp")])
 
 [node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
 position = Vector2(141, 284)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_ym3tv")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_631el")])
 
 [node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
 position = Vector2(862, 295)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bwj6o")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_vs120")])
 
 [node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
 position = Vector2(362, 102)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_f3c8l")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_v2cs8")])
 
 [node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
 position = Vector2(573, 283)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bu0y5")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_32sfa")])
 
 [node name="ResourceStorage" parent="Entities" unique_id=637124255 instance=ExtResource("20_resource_storage")]
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6a4tp"), SubResource("Resource_631el"), SubResource("Resource_vs120"), SubResource("Resource_v2cs8"), SubResource("Resource_32sfa")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_titue"), SubResource("Resource_tt7mg"), SubResource("Resource_htg8p"), SubResource("Resource_jcvim"), SubResource("Resource_fnkle")])
 
 [node name="ResourceViews" type="HBoxContainer" parent="Entities" unique_id=1681811253]
 offset_left = 290.0
@@ -198,25 +203,25 @@ theme_override_constants/separation = 20
 
 [node name="FoodView" parent="Entities/ResourceViews" unique_id=1665693487 instance=ExtResource("18_resource_view")]
 layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_titue")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
 
 [node name="WoodView" parent="Entities/ResourceViews" unique_id=1551522710 instance=ExtResource("18_resource_view")]
 layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_tt7mg")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv")])
 
 [node name="WeaponsView" parent="Entities/ResourceViews" unique_id=1066766489 instance=ExtResource("18_resource_view")]
 layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_htg8p")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_8lpvs")])
 
 [node name="ManaView" parent="Entities/ResourceViews" unique_id=1455940605 instance=ExtResource("18_resource_view")]
 layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
 
 [node name="GoldView" parent="Entities/ResourceViews" unique_id=40109464 instance=ExtResource("18_resource_view")]
 layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24")])
 
-[node name="LocationEventView" parent="." instance=ExtResource("26_event_view")]
+[node name="LocationEventView" parent="." unique_id=1116405939 instance=ExtResource("26_event_view")]
 offset_left = 140.0
 offset_top = 610.0
 offset_right = 980.0
@@ -229,31 +234,23 @@ position = Vector2(364, 203)
 script = ExtResource("2_wrm1d")
 metadata/_custom_type_script = "uid://b3vi2ingux88g"
 
-[node name="CablesMoveSystem" type="Node" parent="Systems/input" unique_id=1468138630]
+[node name="PinSelectionSystem" type="Node" parent="Systems/input" unique_id=1468138630]
 script = ExtResource("4_3dryh")
 metadata/_custom_type_script = "uid://bwiqdphygjwr5"
-
-[node name="process" type="Node" parent="Systems" unique_id=762483022]
-script = ExtResource("2_wrm1d")
-metadata/_custom_type_script = "uid://b3vi2ingux88g"
-
-[node name="CableRenderSystem" type="Node" parent="Systems/process" unique_id=172118598]
-script = ExtResource("12_cable_render")
-group = &"process"
-
-[node name="LocationEventResolutionSystem" type="Node" parent="Systems/process" unique_id=919693870]
-script = ExtResource("24_event_resolution")
-
-[node name="LifetimeSystem" type="Node" parent="Systems/process" unique_id=1765250480]
-script = ExtResource("25_lifetime")
-group = &"process"
 
 [node name="events" type="Node" parent="Systems" unique_id=1655935152]
 script = ExtResource("2_wrm1d")
 metadata/_custom_type_script = "uid://b3vi2ingux88g"
 
+[node name="EventResolutionSystem" type="Node" parent="Systems/events" unique_id=919693870]
+script = ExtResource("24_event_resolution")
+
 [node name="HelpNeededObserver" type="Node" parent="Systems/events" unique_id=933725463]
 script = ExtResource("11_help_observer")
+yield_existing = true
+
+[node name="SelectedPinObserver" type="Node" parent="Systems/events" unique_id=757531426]
+script = ExtResource("29_selected_pin")
 yield_existing = true
 
 [node name="ResourceViewObserver" type="Node" parent="Systems/events" unique_id=58712318]
@@ -263,8 +260,40 @@ yield_existing = true
 [node name="LocationEventsSystem" type="Node" parent="Systems/events" unique_id=1189733488]
 script = ExtResource("21_location_events")
 catalog = ExtResource("23_event_catalog")
+group = &"events"
 
 [node name="LocationEventObserver" type="Node" parent="Systems/events" unique_id=962871629]
 script = ExtResource("22_event_observer")
 event_view = NodePath("../../../LocationEventView")
 yield_existing = true
+
+[node name="process" type="Node" parent="Systems" unique_id=762483022]
+script = ExtResource("2_wrm1d")
+metadata/_custom_type_script = "uid://b3vi2ingux88g"
+
+[node name="CableRenderSystem" type="Node" parent="Systems/process" unique_id=172118598]
+script = ExtResource("12_cable_render")
+group = &"process"
+
+[node name="LocationEventEffectsSystem" type="Node" parent="Systems/process" unique_id=969927882]
+script = ExtResource("28_event_effects")
+
+[node name="ResourceChangeSystem" type="Node" parent="Systems/process" unique_id=54610205]
+script = ExtResource("27_resource_change")
+group = &"process"
+
+[node name="ResourceTrendSystem" type="Node" parent="Systems/process"]
+script = ExtResource("38_resource_trend")
+group = &"process"
+
+[node name="cleanup" type="Node" parent="Systems" unique_id=2085096247]
+script = ExtResource("2_wrm1d")
+metadata/_custom_type_script = "uid://b3vi2ingux88g"
+
+[node name="LifetimeSystem" type="Node" parent="Systems/cleanup" unique_id=1765250480]
+script = ExtResource("25_lifetime")
+group = &"cleanup"
+
+[node name="EventCleanupSystem" type="Node" parent="Systems/cleanup" unique_id=2121781065]
+script = ExtResource("37_lmoi6")
+metadata/_custom_type_script = "uid://b8hqjj1l8hi54"

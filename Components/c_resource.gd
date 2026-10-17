@@ -24,10 +24,3 @@ extends Component
 		var previous := cap
 		cap = new_value
 		property_changed.emit(self, "cap", previous, cap)
-
-
-static func find_on(entity: Entity, resource_type: Enums.ResourceType) -> C_Resource:
-	for component in entity.components.values():
-		if component is C_Resource and component.resource == resource_type:
-			return component
-	return null

@@ -29,24 +29,25 @@ func _on_view_changed(event: Variant, entity: Entity, _payload: Variant) -> void
 	if event == Observer.Event.UNMATCH:
 		entity.set("visible", false)
 		return
+	if not entity.has_component(C_ResourceTrend):
+		cmd.add_component(entity, C_ResourceTrend.new())
 	_refresh_view(entity)
 
 
 func _refresh_view(view: Entity, changed: Entity = null, excluded: Entity = null) -> void:
 	var binding: C_ResourceView = view.get_component(C_ResourceView)
-	var source := _find_source(binding, changed, excluded)
+	var resource := _find_source(binding, changed, excluded)
 	var title := view.get_node("Header/ResourceName") as Label
 	var counter := view.get_node("Header/Amount") as Label
 	var bar := view.get_node("ProgressBar") as ProgressBar
 	var control := view.get_node(".") as Control
 	title.text = Enums.ResourceType.keys()[binding.resource].capitalize()
-	if source == null:
+	if resource == null:
 		bar.value = 0.0
 		bar.max_value = 1.0
 		counter.text = "0 / 0"
 		control.hide()
 		return
-	var resource := C_Resource.find_on(source, binding.resource)
 	var capacity := maxf(resource.cap, 0.0)
 	var amount := clampf(resource.value, 0.0, capacity)
 	bar.max_value = capacity if capacity > 0.0 else 1.0
@@ -57,16 +58,24 @@ func _refresh_view(view: Entity, changed: Entity = null, excluded: Entity = null
 	control.show()
 
 
-func _find_source(binding: C_ResourceView, changed: Entity, excluded: Entity) -> Entity:
-	if changed != excluded and _matches(changed, binding):
-		return changed
+func _find_source(binding: C_ResourceView, changed: Entity, excluded: Entity) -> C_Resource:
+	if changed != excluded:
+		var resource := _find_resource(changed, binding.resource)
+		if resource != null:
+			return resource
 	for entity in _world.query.with_any(_resource_types).execute():
-		if entity != excluded and _matches(entity, binding):
-			return entity
+		if entity == excluded:
+			continue
+		var resource := _find_resource(entity, binding.resource)
+		if resource != null:
+			return resource
 	return null
 
 
-func _matches(entity, binding: C_ResourceView) -> bool:
+func _find_resource(entity: Entity, resource_type: Enums.ResourceType) -> C_Resource:
 	if not is_instance_valid(entity) or not entity.enabled or not entity is ResourceStorage:
-		return false
-	return C_Resource.find_on(entity, binding.resource) != null
+		return null
+	for component in entity.components.values():
+		if component is C_Resource and component.resource == resource_type:
+			return component
+	return null

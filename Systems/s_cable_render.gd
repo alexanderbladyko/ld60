@@ -16,6 +16,9 @@ func process(entities: Array[Entity], _components: Array, _delta: float) -> void
 			cmd.remove_entity(entity)
 			continue
 		var source := cable.source.get_node("CableAnchor") as Node2D
+		if cable.state == C_Cable.State.DRAGGING:
+			cable.cursor_position = (get_viewport().get_canvas_transform().affine_inverse()
+				* get_viewport().get_mouse_position())
 		var endpoint := cable.cursor_position
 		if cable.state == C_Cable.State.CONNECTED:
 			var target := cable.target.get_node("CableAnchor") as Node2D

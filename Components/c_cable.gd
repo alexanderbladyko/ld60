@@ -7,8 +7,6 @@ var source: Entity
 var target: Entity
 var cursor_position: Vector2 = Vector2.ZERO
 var state: State = State.DRAGGING
-var location_event: Entity
-var event_processed: bool = false
 
 @export var color: Color = Color(0.85, 0.64, 0.29, 1.0)
 @export_range(1.0, 20.0) var width: float = 12.0

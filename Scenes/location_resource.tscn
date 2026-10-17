@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://57kkmumub3qr"]
+
+[node name="LocationResource" type="VBoxContainer" unique_id=687029359]
+offset_right = 100.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Header" type="HBoxContainer" parent="." unique_id=714559240]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="ResourceName" type="Label" parent="Header" unique_id=1657740952]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resource"
+
+[node name="Amount" type="Label" parent="Header" unique_id=1817673509]
+layout_mode = 2
+text = "0 / 100"
+
+[node name="Trend" type="Label" parent="Header"]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1929055818]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_filter = 2
+step = 0.0
+show_percentage = false
