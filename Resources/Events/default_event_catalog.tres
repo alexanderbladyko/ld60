@@ -6,15 +6,35 @@
 
 [sub_resource type="Resource" id="castle_village"]
 script = ExtResource("3_option")
+message = "Just throw food at them!"
+resource_deltas = Dictionary[int, float]({
+0: 10.0
+})
 
 [sub_resource type="Resource" id="castle_mage_tower"]
 script = ExtResource("3_option")
+message = "I just know the EXACT spell!"
+resource_deltas = Dictionary[int, float]({
+2: 5.0,
+3: -15.0
+})
 
 [sub_resource type="Resource" id="castle_dragon_cave"]
 script = ExtResource("3_option")
+message = "Fire!!!"
+resource_deltas = Dictionary[int, float]({
+1: -20.0,
+4: 10.0
+})
 
 [sub_resource type="Resource" id="castle_city"]
 script = ExtResource("3_option")
+message = "What??"
+resource_deltas = Dictionary[int, float]({
+0: -5.0,
+1: -5.0,
+4: -5.0
+})
 
 [sub_resource type="Resource" id="castle_gate"]
 script = ExtResource("2_definition")
@@ -25,7 +45,6 @@ effect = Dictionary[int, float]({
 0: -1.0,
 2: -2.0
 })
-effect_period = 0.7
 options = Dictionary[int, ExtResource("3_option")]({
 1: SubResource("castle_village"),
 2: SubResource("castle_mage_tower"),
@@ -33,6 +52,179 @@ options = Dictionary[int, ExtResource("3_option")]({
 4: SubResource("castle_city")
 })
 
+[sub_resource type="Resource" id="Resource_bu0y5"]
+script = ExtResource("3_option")
+message = "Take him for a walk!"
+resource_deltas = Dictionary[int, float]({
+1: -4.0,
+3: 4.0
+})
+cooldown_seconds = 10.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_6a4tp"]
+script = ExtResource("3_option")
+message = "Please don't burn our houses!"
+resource_deltas = Dictionary[int, float]({
+0: -10.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_631el"]
+script = ExtResource("3_option")
+message = "Send our best dancers!!!"
+resource_deltas = Dictionary[int, float]({
+1: 10.0,
+2: -5.0,
+4: -2.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_f3c8l"]
+script = ExtResource("3_option")
+message = "I'm sure I've seen a SLEEP spell somewhere!"
+resource_deltas = Dictionary[int, float]({
+3: -3.0,
+4: 20.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_d33pv"]
+script = ExtResource("2_definition")
+event_id = &"dragon_bored"
+location = 3
+message = "I'm bored..."
+weight = 1.5
+effect = Dictionary[int, float]({
+2: -1.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_bu0y5"),
+1: SubResource("Resource_6a4tp"),
+2: SubResource("Resource_f3c8l"),
+4: SubResource("Resource_631el")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
+[sub_resource type="Resource" id="Resource_bx8xc"]
+script = ExtResource("3_option")
+message = "Send our men!"
+resource_deltas = Dictionary[int, float]({
+0: 10.0,
+2: -2.0
+})
+cooldown_seconds = 10.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_mt7ms"]
+script = ExtResource("3_option")
+message = "Once again! WE DON'T HAVE A WATER WIZARD!"
+resource_deltas = Dictionary[int, float]({
+0: -4.0,
+3: -4.0
+})
+cooldown_seconds = 5.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_jmmyx"]
+script = ExtResource("3_option")
+message = "Fire!!"
+resource_deltas = Dictionary[int, float]({
+0: -2.0,
+1: -10.0,
+2: -2.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_mlrm6"]
+script = ExtResource("3_option")
+message = "Ha, drain pipes!"
+resource_deltas = Dictionary[int, float]({
+0: 15.0,
+1: -2.0,
+2: 5.0
+})
+cooldown_seconds = 15.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_eg6ko"]
+script = ExtResource("2_definition")
+event_id = &"village_flood"
+location = 1
+message = "It's a FLOOD. Please save the fields!"
+cooldown_seconds = 50.0
+effect_duration = 20.0
+effect = Dictionary[int, float]({
+0: -1.0
+})
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_bx8xc"),
+2: SubResource("Resource_mt7ms"),
+3: SubResource("Resource_jmmyx"),
+4: SubResource("Resource_mlrm6")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
+[sub_resource type="Resource" id="Resource_0bgpu"]
+script = ExtResource("3_option")
+message = "Ha!"
+resource_deltas = Dictionary[int, float]({
+0: -5.0,
+2: -10.0,
+4: 20.0
+})
+cooldown_seconds = 5.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_jlnml"]
+script = ExtResource("3_option")
+message = "Pass"
+resource_deltas = Dictionary[int, float]({
+0: 5.0
+})
+cooldown_seconds = 2.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_mh0yw"]
+script = ExtResource("3_option")
+message = "In my way"
+resource_deltas = Dictionary[int, float]({
+1: -20.0,
+3: 30.0
+})
+cooldown_seconds = 30.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_utke1"]
+script = ExtResource("3_option")
+message = "Hurray"
+resource_deltas = Dictionary[int, float]({
+0: -5.0,
+3: 30.0
+})
+cooldown_seconds = 10.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_1opkm"]
+script = ExtResource("2_definition")
+event_id = &"mage_party"
+location = 2
+message = "All the water is wine now! Let's celebrate!"
+cooldown_seconds = 10.0
+effect_duration = 5.0
+effect = Dictionary[int, float]({
+0: -1.0,
+3: 2.0
+})
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_0bgpu"),
+1: SubResource("Resource_jlnml"),
+3: SubResource("Resource_mh0yw"),
+4: SubResource("Resource_utke1")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
 [resource]
 script = ExtResource("1_catalog")
-events = Array[ExtResource("2_definition")]([SubResource("castle_gate")])
+events = Array[ExtResource("2_definition")]([SubResource("castle_gate"), SubResource("Resource_d33pv"), SubResource("Resource_eg6ko"), SubResource("Resource_1opkm")])
