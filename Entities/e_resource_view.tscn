@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dpkofd7uqxnd3"]
 
-[ext_resource type="PackedScene" path="res://Scenes/location_resource.tscn" id="1_visual"]
+[ext_resource type="PackedScene" uid="uid://57kkmumub3qr" path="res://Scenes/location_resource.tscn" id="1_visual"]
 [ext_resource type="Script" uid="uid://tm1ntaj80wrw" path="res://Entities/e_resource_view.gd" id="2_entity"]
 [ext_resource type="Script" uid="uid://btbkogygjvnt6" path="res://Components/c_resource_view.gd" id="3_binding"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="4_component"]
 
-[sub_resource type="Resource" id="Resource_urrgn"]
+[sub_resource type="Resource" id="Resource_e85n4"]
 resource_local_to_scene = true
 script = ExtResource("3_binding")
 
@@ -13,7 +13,7 @@ script = ExtResource("3_binding")
 custom_minimum_size = Vector2(100, 0)
 offset_right = 100.0
 script = ExtResource("2_entity")
-component_resources = Array[ExtResource("4_component")]([SubResource("Resource_urrgn")])
+component_resources = Array[ExtResource("4_component")]([SubResource("Resource_e85n4")])
 
 [node name="ResourceName" parent="Header" index="0"]
 theme_override_font_sizes/font_size = 10

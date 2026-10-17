@@ -36,7 +36,6 @@ func process(entities: Array[Entity], _components: Array, delta: float) -> void:
 			trend.elapsed = 0.0
 			trend.samples.clear()
 			indicator.text = ""
-			indicator.tooltip_text = ""
 			continue
 		trend.elapsed += maxf(delta, 0.0)
 		var change := source.value - trend.previous_value
@@ -52,10 +51,8 @@ func process(entities: Array[Entity], _components: Array, delta: float) -> void:
 		var rate := net_change / maxf(minf(window, trend.elapsed), 0.001)
 		if is_zero_approx(rate):
 			indicator.text = ""
-			indicator.tooltip_text = ""
 			continue
-		var arrow := "→" if rate > 0.0 else "←"
+		var arrow := ">" if rate > 0.0 else "<"
 		indicator.text = arrow + arrow if absf(rate) > double_arrow_threshold else arrow
 		indicator.add_theme_color_override("font_color",
 			Color(0.3, 0.9, 0.4) if rate > 0.0 else Color(1.0, 0.3, 0.3))
-		indicator.tooltip_text = "%s%s / s" % ["+" if rate > 0.0 else "", String.num(rate, 1)]
