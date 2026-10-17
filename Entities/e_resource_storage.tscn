@@ -1,0 +1,39 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://Entities/e_resource_storage.gd" id="1_storage"]
+[ext_resource type="Script" path="res://addons/gecs/ecs/component.gd" id="2_component"]
+[ext_resource type="Script" path="res://Components/c_food_resource.gd" id="3_food"]
+[ext_resource type="Script" path="res://Components/c_wood_resource.gd" id="4_wood"]
+[ext_resource type="Script" path="res://Components/c_weapons_resource.gd" id="5_weapons"]
+[ext_resource type="Script" path="res://Components/c_mana_resource.gd" id="6_mana"]
+[ext_resource type="Script" path="res://Components/c_gold_resource.gd" id="7_gold"]
+
+[sub_resource type="Resource" id="Food"]
+resource_local_to_scene = true
+script = ExtResource("3_food")
+resource = 0
+
+[sub_resource type="Resource" id="Wood"]
+resource_local_to_scene = true
+script = ExtResource("4_wood")
+resource = 1
+
+[sub_resource type="Resource" id="Weapons"]
+resource_local_to_scene = true
+script = ExtResource("5_weapons")
+resource = 2
+
+[sub_resource type="Resource" id="Mana"]
+resource_local_to_scene = true
+script = ExtResource("6_mana")
+resource = 3
+
+[sub_resource type="Resource" id="Gold"]
+resource_local_to_scene = true
+script = ExtResource("7_gold")
+resource = 4
+
+[node name="ResourceStorage" type="Node"]
+script = ExtResource("1_storage")
+alias = &"resource_storage"
+component_resources = Array[ExtResource("2_component")]([SubResource("Food"), SubResource("Wood"), SubResource("Weapons"), SubResource("Mana"), SubResource("Gold")])

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="LocationEventCatalog" format=3 uid="uid://ymmc2d6dk7en"]
+
+[ext_resource type="Script" uid="uid://jjrvbeybog3e" path="res://Resources/Events/location_event_catalog.gd" id="1_catalog"]
+[ext_resource type="Script" uid="uid://by1hndcj73s4l" path="res://Resources/Events/location_event_definition.gd" id="2_definition"]
+[ext_resource type="Script" uid="uid://13t14ftl7e0y" path="res://Resources/Events/location_event_option.gd" id="3_option"]
+
+[sub_resource type="Resource" id="castle_gate"]
+script = ExtResource("2_definition")
+event_id = &"castle_gate"
+message = "Goblins attack us! Send help!"
+cooldown_seconds = 10.0
+effect = Dictionary[int, float]({
+0: 0.0,
+2: -2.0
+})
+effect_period = 0.7
+
+[resource]
+script = ExtResource("1_catalog")
+events = Array[ExtResource("2_definition")]([SubResource("castle_gate")])

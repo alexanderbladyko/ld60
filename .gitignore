@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Temporary copies created when Godot loads GDExtension libraries.
+/addons/terrain_3d/bin/~*
+
+.build/

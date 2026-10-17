@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chq5xq6je32bm"]
+
+[ext_resource type="PackedScene" uid="uid://ci47mjumr8sqp" path="res://Entities/e_base_location.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_component"]
+[ext_resource type="Script" uid="uid://dryxapum6y7pr" path="res://Components/c_location.gd" id="3_location"]
+
+[sub_resource type="Resource" id="Resource_7gb6q"]
+resource_local_to_scene = true
+script = ExtResource("3_location")
+location = 4
+
+[node name="City" unique_id=319407848 instance=ExtResource("1_base")]
+component_resources = Array[ExtResource("2_component")]([SubResource("Resource_7gb6q")])
+
+[node name="Name" parent="." index="1" unique_id=2005404104]
+text = "City"

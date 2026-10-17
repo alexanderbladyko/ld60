@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0g3wmy8bbde7"]
+
+[ext_resource type="PackedScene" uid="uid://c5uba7fp7u04p" path="res://Entities/e_base_pin.tscn" id="1_5yltl"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_ynp2p"]
+[ext_resource type="Script" uid="uid://draem8dcb6tc2" path="res://Components/c_pin.gd" id="3_bdol8"]
+
+[sub_resource type="Resource" id="Resource_5yltl"]
+resource_local_to_scene = true
+script = ExtResource("3_bdol8")
+
+[node name="Pin" unique_id=861097526 instance=ExtResource("1_5yltl")]
+component_resources = Array[ExtResource("2_ynp2p")]([SubResource("Resource_5yltl")])
+
+[node name="Name" parent="." index="4" unique_id=1324464638]
+text = "Castle"
