@@ -10,6 +10,7 @@ func process(entities: Array[Entity], _components: Array, _delta: float) -> void
 	for entity in entities:
 		var resolution: C_EventResolutionEvent = entity.get_component(C_EventResolutionEvent)
 		_resolve(resolution)
+		cmd.execute()
 
 
 func _resolve(resolution: C_EventResolutionEvent) -> void:
@@ -36,6 +37,12 @@ func _resolve(resolution: C_EventResolutionEvent) -> void:
 		if is_instance_valid(resolution.cable):
 			cmd.remove_entity(resolution.cable)
 		return
+	if target.has_component(C_LocationCooldown):
+		var cooldown: C_LocationCooldown = target.get_component(C_LocationCooldown)
+		if cooldown.remaining > 0.0:
+			if is_instance_valid(resolution.cable):
+				cmd.remove_entity(resolution.cable)
+			return
 	for resource_type in option.resource_deltas:
 		var request := C_ResourceChangeEvent.new()
 		request.resource = resource_type

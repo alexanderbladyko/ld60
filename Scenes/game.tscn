@@ -34,6 +34,8 @@
 [ext_resource type="Script" uid="uid://ryhmlfycg4be" path="res://Systems/o_selected_pin.gd" id="29_selected_pin"]
 [ext_resource type="Script" uid="uid://b8hqjj1l8hi54" path="res://Systems/s_event_cleanup.gd" id="37_lmoi6"]
 [ext_resource type="Script" path="res://Systems/s_resource_trend.gd" id="38_resource_trend"]
+[ext_resource type="Script" path="res://Systems/s_location_cooldown.gd" id="39_location_cooldown"]
+[ext_resource type="Script" path="res://Systems/o_location_cooldown.gd" id="40_cooldown_observer"]
 [ext_resource type="Script" uid="uid://batmyw1junnej" path="res://Components/c_food_resource.gd" id="stock_food"]
 [ext_resource type="Script" uid="uid://b4ernqwnkn3om" path="res://Components/c_gold_resource.gd" id="stock_gold"]
 [ext_resource type="Script" uid="uid://bhyh2oe35eflo" path="res://Components/c_mana_resource.gd" id="stock_mana"]
@@ -238,6 +240,10 @@ metadata/_custom_type_script = "uid://b3vi2ingux88g"
 script = ExtResource("4_3dryh")
 metadata/_custom_type_script = "uid://bwiqdphygjwr5"
 
+[node name="LocationCooldownSystem" type="Node" parent="Systems/input"]
+script = ExtResource("39_location_cooldown")
+group = &"input"
+
 [node name="events" type="Node" parent="Systems" unique_id=1655935152]
 script = ExtResource("2_wrm1d")
 metadata/_custom_type_script = "uid://b3vi2ingux88g"
@@ -251,6 +257,10 @@ yield_existing = true
 
 [node name="SelectedPinObserver" type="Node" parent="Systems/events" unique_id=757531426]
 script = ExtResource("29_selected_pin")
+yield_existing = true
+
+[node name="LocationCooldownObserver" type="Node" parent="Systems/events"]
+script = ExtResource("40_cooldown_observer")
 yield_existing = true
 
 [node name="ResourceViewObserver" type="Node" parent="Systems/events" unique_id=58712318]

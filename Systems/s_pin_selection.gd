@@ -37,7 +37,8 @@ func queue_action(action: StringName, position: Vector2) -> void:
 
 func process(_entities: Array[Entity], _components: Array, _delta: float) -> void:
 	var selected := _selected_pin()
-	if selected != null and (not selected.enabled or not selected.has_component(C_HelpNeeded)):
+	if selected != null and (not selected.enabled or not selected.has_component(C_HelpNeeded)
+		or _is_cooling_down(selected)):
 		cmd.remove_component(selected, C_SelectedPin)
 		cmd.execute()
 	for command in _actions:
@@ -54,6 +55,8 @@ func process(_entities: Array[Entity], _components: Array, _delta: float) -> voi
 
 
 func _select_pin(pin: Entity) -> void:
+	if _is_cooling_down(pin):
+		return
 	var selected := _selected_pin()
 	if selected == null:
 		if pin.has_component(C_HelpNeeded):
@@ -74,6 +77,16 @@ func _select_pin(pin: Entity) -> void:
 	event.add_component(resolution)
 	cmd.add_entity(event)
 	cmd.remove_component(selected, C_SelectedPin)
+
+
+func _is_cooling_down(pin: Entity) -> bool:
+	var binding: C_Pin = pin.get_component(C_Pin)
+	for entity in _world.query.with_all([C_Location, C_LocationCooldown]).enabled().execute():
+		var location: C_Location = entity.get_component(C_Location)
+		var cooldown: C_LocationCooldown = entity.get_component(C_LocationCooldown)
+		if location.location == binding.location and cooldown.remaining > 0.0:
+			return true
+	return false
 
 
 func _selected_pin() -> Entity:

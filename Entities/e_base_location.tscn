@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="3_component"]
 [ext_resource type="Texture2D" uid="uid://dqhpkkwhk2kcd" path="res://addons/gecs/assets/observer.svg" id="4_ouiug"]
 [ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="5_giht0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/cooldown.svg" id="6_cooldown"]
 
 [sub_resource type="Resource" id="Resource_location"]
 resource_local_to_scene = true
@@ -27,3 +28,22 @@ offset_top = 23.0
 offset_right = 21.0
 offset_bottom = 46.0
 theme_override_fonts/font = ExtResource("5_giht0")
+
+[node name="Cooldown" type="Node2D" parent="."]
+visible = false
+z_index = 10
+position = Vector2(-20, 0)
+
+[node name="Icon" type="Sprite2D" parent="Cooldown"]
+texture = ExtResource("6_cooldown")
+
+[node name="Seconds" type="Label" parent="Cooldown"]
+offset_left = 20.0
+offset_top = -14.0
+offset_right = 72.0
+offset_bottom = 14.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.81, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.07, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
