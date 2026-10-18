@@ -44,7 +44,11 @@
 [ext_resource type="Script" uid="uid://csdgeahc0w2kg" path="res://Systems/s_chaos.gd" id="42_chaos"]
 [ext_resource type="PackedScene" uid="uid://q1wws1m1k2oo" path="res://Scenes/chaos_vignette.tscn" id="43_vignette"]
 [ext_resource type="Script" uid="uid://dxoic7l2m8kj1" path="res://Systems/o_chaos_vignette.gd" id="44_vignette_observer"]
+[ext_resource type="Script" uid="uid://dek481kh7pg4t" path="res://Systems/o_sound_effects.gd" id="45_sound_effects"]
+[ext_resource type="Script" uid="uid://c0ts5hfdkjosl" path="res://Systems/o_event_score.gd" id="46_event_score"]
+[ext_resource type="PackedScene" path="res://Scenes/operator_score.tscn" id="47_operator_score"]
 [ext_resource type="FontFile" uid="uid://d0vmy5yq82h2" path="res://Fonts/Papernotes.ttf" id="51_jcvim"]
+[ext_resource type="Texture2D" uid="uid://dbupfq1t58l5r" path="res://Assets/sign.png" id="55_8lpvs"]
 [ext_resource type="Script" uid="uid://cwgs6e0bqs0p5" path="res://Components/c_chaos_resource.gd" id="stock_chaos"]
 [ext_resource type="Script" uid="uid://batmyw1junnej" path="res://Components/c_food_resource.gd" id="stock_food"]
 [ext_resource type="Script" uid="uid://b4ernqwnkn3om" path="res://Components/c_gold_resource.gd" id="stock_gold"]
@@ -52,107 +56,107 @@
 [ext_resource type="Script" uid="uid://dcik8m7bkqdy8" path="res://Components/c_weapons_resource.gd" id="stock_weapons"]
 [ext_resource type="Script" uid="uid://dqrpmj4o7jsn0" path="res://Components/c_wood_resource.gd" id="stock_wood"]
 
-[sub_resource type="Resource" id="Resource_jcvim"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-
-[sub_resource type="Resource" id="Resource_fnkle"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 4
-
-[sub_resource type="Resource" id="Resource_wr3wg"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 3
-
 [sub_resource type="Resource" id="Resource_6xvgv"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 3
+script = ExtResource("5_h4fw4")
 
 [sub_resource type="Resource" id="Resource_8lpvs"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 2
+location = 4
 
 [sub_resource type="Resource" id="Resource_x6jpx"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 1
+location = 3
 
 [sub_resource type="Resource" id="Resource_sjh24"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
+location = 3
 
 [sub_resource type="Resource" id="Resource_k5jl5"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 4
+script = ExtResource("5_h4fw4")
+location = 2
 
 [sub_resource type="Resource" id="Resource_nqk4g"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 2
+script = ExtResource("5_h4fw4")
+location = 1
 
 [sub_resource type="Resource" id="Resource_fh6x0"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 1
 
 [sub_resource type="Resource" id="Resource_j0obb"]
 resource_local_to_scene = true
-script = ExtResource("stock_food")
+script = ExtResource("5_ewbju")
+location = 4
 
 [sub_resource type="Resource" id="Resource_nfavm"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 2
+
+[sub_resource type="Resource" id="Resource_jcn4n"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 1
+
+[sub_resource type="Resource" id="Resource_l4kai"]
+resource_local_to_scene = true
+script = ExtResource("stock_food")
+
+[sub_resource type="Resource" id="Resource_kcoun"]
 resource_local_to_scene = true
 script = ExtResource("stock_wood")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_jcn4n"]
+[sub_resource type="Resource" id="Resource_jegl3"]
 resource_local_to_scene = true
 script = ExtResource("stock_weapons")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_l4kai"]
+[sub_resource type="Resource" id="Resource_csv17"]
 resource_local_to_scene = true
 script = ExtResource("stock_mana")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_kcoun"]
+[sub_resource type="Resource" id="Resource_6i05k"]
 resource_local_to_scene = true
 script = ExtResource("stock_gold")
 resource = 4
 
-[sub_resource type="Resource" id="Resource_jegl3"]
-resource_local_to_scene = true
-script = ExtResource("stock_chaos")
-
-[sub_resource type="Resource" id="Resource_csv17"]
-resource_local_to_scene = true
-script = ExtResource("19_resource_binding")
-
-[sub_resource type="Resource" id="Resource_6i05k"]
-resource_local_to_scene = true
-script = ExtResource("19_resource_binding")
-resource = 1
-
 [sub_resource type="Resource" id="Resource_1kfie"]
 resource_local_to_scene = true
-script = ExtResource("19_resource_binding")
-resource = 2
+script = ExtResource("stock_chaos")
 
 [sub_resource type="Resource" id="Resource_sfx3s"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 3
 
 [sub_resource type="Resource" id="Resource_p5qon"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 4
+resource = 1
 
 [sub_resource type="Resource" id="Resource_gyste"]
+resource_local_to_scene = true
+script = ExtResource("19_resource_binding")
+resource = 2
+
+[sub_resource type="Resource" id="Resource_p3b6d"]
+resource_local_to_scene = true
+script = ExtResource("19_resource_binding")
+resource = 3
+
+[sub_resource type="Resource" id="Resource_bchkn"]
+resource_local_to_scene = true
+script = ExtResource("19_resource_binding")
+resource = 4
+
+[sub_resource type="Resource" id="Resource_ff75x"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 5
@@ -173,7 +177,7 @@ scale = Vector2(0.4655019, 0.537942)
 texture = ExtResource("2_631el")
 
 [node name="LongSign" type="Sprite2D" parent="." unique_id=1919484986]
-position = Vector2(554, 23.499996)
+position = Vector2(554, 33.499996)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("4_htg8p")
 
@@ -193,113 +197,112 @@ metadata/_custom_type_script = "uid://cdu5tlyk72uu4"
 
 [node name="CastlePin" parent="Entities" unique_id=861097526 instance=ExtResource("3_o5yvi")]
 position = Vector2(85, 611)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv")])
 
 [node name="CityPin" parent="Entities" unique_id=524521090 instance=ExtResource("6_rku1e")]
 position = Vector2(780, 611)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_8lpvs")])
 
 [node name="DragonCavePin" parent="Entities" unique_id=1908340287 instance=ExtResource("7_rfjv2")]
 position = Vector2(999, 611)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
 
 [node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
-position = Vector2(1041, 367)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv")])
+position = Vector2(1041, 225)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24")])
 
 [node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
 position = Vector2(288, 611)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_8lpvs")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_k5jl5")])
 
 [node name="VillagePin" parent="Entities" unique_id=2026254875 instance=ExtResource("9_nb51f")]
 position = Vector2(531, 611)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
-
-[node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
-position = Vector2(188, 399)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24")])
-
-[node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
-position = Vector2(822, 359)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_k5jl5")])
-
-[node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
-position = Vector2(407, 370)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nqk4g")])
 
-[node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
-position = Vector2(606, 375)
+[node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
+position = Vector2(188, 257)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fh6x0")])
 
+[node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
+position = Vector2(822, 217)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_j0obb")])
+
+[node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
+position = Vector2(407, 228)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nfavm")])
+
+[node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
+position = Vector2(606, 233)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcn4n")])
+
 [node name="ResourceStorage" parent="Entities" unique_id=637124255 instance=ExtResource("20_resource_storage")]
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_j0obb"), SubResource("Resource_nfavm"), SubResource("Resource_jcn4n"), SubResource("Resource_l4kai"), SubResource("Resource_kcoun"), SubResource("Resource_jegl3")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_l4kai"), SubResource("Resource_kcoun"), SubResource("Resource_jegl3"), SubResource("Resource_csv17"), SubResource("Resource_6i05k"), SubResource("Resource_1kfie")])
 
 [node name="FoodView" parent="Entities" unique_id=1665693487 instance=ExtResource("18_resource_view")]
 offset_left = 483.0
-offset_top = 96.0
+offset_top = 767.0
 offset_right = 622.0
-offset_bottom = 150.0
+offset_bottom = 821.0
 theme_override_constants/separation = 4
 fill_color = Color(0.9882353, 0.827451, 0.3019608, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_csv17")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sfx3s")])
 
 [node name="WoodView" parent="Entities" unique_id=1551522710 instance=ExtResource("18_resource_view")]
 offset_left = 297.0
-offset_top = 96.0
+offset_top = 767.0
 offset_right = 436.0
-offset_bottom = 150.0
+offset_bottom = 821.0
 theme_override_constants/separation = 4
 fill_color = Color(0.4862745, 0.1764706, 0.07058824, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6i05k")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_p5qon")])
 
 [node name="WeaponsView" parent="Entities" unique_id=1066766489 instance=ExtResource("18_resource_view")]
 offset_left = 81.0
-offset_top = 96.0
+offset_top = 767.0
 offset_right = 220.0
-offset_bottom = 150.0
+offset_bottom = 821.0
 theme_override_constants/separation = 4
 fill_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_1kfie")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_gyste")])
 
 [node name="ManaView" parent="Entities" unique_id=1455940605 instance=ExtResource("18_resource_view")]
 offset_left = 710.0
-offset_top = 96.0
+offset_top = 767.0
 offset_right = 849.0
-offset_bottom = 150.0
+offset_bottom = 821.0
 theme_override_constants/separation = 4
 fill_color = Color(0.007843138, 0.5176471, 0.78039217, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sfx3s")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_p3b6d")])
 
 [node name="GoldView" parent="Entities" unique_id=40109464 instance=ExtResource("18_resource_view")]
 offset_left = 927.0
-offset_top = 96.0
+offset_top = 767.0
 offset_right = 1066.0
-offset_bottom = 150.0
+offset_bottom = 821.0
 theme_override_constants/separation = 4
 fill_color = Color(0.7921569, 0.5411765, 0.015686275, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_p5qon")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bchkn")])
 
 [node name="ChaosView" parent="Entities" unique_id=1073779943 instance=ExtResource("18_resource_view")]
 offset_left = 286.0
-offset_top = -9.0
+offset_top = 3.0
 offset_right = 816.0
-offset_bottom = 45.0
+offset_bottom = 57.0
 theme_override_constants/separation = 4
 fill_color = Color(0.74509805, 0.09411765, 0.3647059, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_gyste")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_ff75x")])
 
 [node name="LocationEventView" parent="." unique_id=1116405939 instance=ExtResource("26_event_view")]
-visible = false
-offset_left = 139.0
-offset_top = 752.0
-offset_right = 977.0
-offset_bottom = 861.0
+offset_left = 149.0
+offset_top = 438.0
+offset_right = 987.0
+offset_bottom = 547.0
 
 [node name="Systems" type="Node2D" parent="." unique_id=1608136620]
 position = Vector2(364, 203)
@@ -346,9 +349,17 @@ script = ExtResource("44_vignette_observer")
 vignette_view = NodePath("../../../ChaosOverlay/Vignette")
 yield_existing = true
 
+[node name="SoundEffectsObserver" type="Node" parent="Systems/events" unique_id=2063029230]
+script = ExtResource("45_sound_effects")
+
+[node name="EventScoreObserver" type="Node" parent="Systems/events" unique_id=1876760553]
+script = ExtResource("46_event_score")
+score_view = NodePath("../../../OperatorScore/Count")
+
 [node name="LocationEventsSystem" type="Node" parent="Systems/events" unique_id=1189733488]
 script = ExtResource("21_location_events")
 catalog = ExtResource("23_event_catalog")
+group = &"events"
 
 [node name="LocationEventObserver" type="Node" parent="Systems/events" unique_id=962871629]
 script = ExtResource("22_event_observer")
@@ -381,6 +392,7 @@ group = &"process"
 
 [node name="PinEffectPreviewSystem" type="Node" parent="Systems/process" unique_id=1709687650]
 script = ExtResource("41_pin_effect_preview")
+group = &"process"
 
 [node name="cleanup" type="Node" parent="Systems" unique_id=2085096247]
 script = ExtResource("2_wrm1d")
@@ -397,13 +409,15 @@ metadata/_custom_type_script = "uid://b8hqjj1l8hi54"
 
 [node name="ChaosOverlay" parent="." unique_id=271939841 instance=ExtResource("43_vignette")]
 
+[node name="OperatorScore" parent="." unique_id=503703002 instance=ExtResource("47_operator_score")]
+
 [node name="Message" type="Label" parent="." unique_id=451750832]
 custom_minimum_size = Vector2(0, 38)
 custom_maximum_size = Vector2(600, -1)
 offset_left = 471.0
-offset_top = 30.0
+offset_top = 42.0
 offset_right = 729.0
-offset_bottom = 68.0
+offset_bottom = 80.0
 size_flags_vertical = 3
 offset_transform_enabled = true
 offset_transform_position = Vector2(9.51, 0)
@@ -414,14 +428,13 @@ text = "Don't let Chaos go off!"
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Message" type="Label" parent="Message" unique_id=521599405]
+[node name="Message2" type="Label" parent="." unique_id=521599405]
 custom_minimum_size = Vector2(0, 38)
 custom_maximum_size = Vector2(600, -1)
-layout_mode = 0
-offset_left = -139.0
-offset_top = 476.0
-offset_right = 282.0
-offset_bottom = 521.0
+offset_left = 346.0
+offset_top = 363.0
+offset_right = 767.0
+offset_bottom = 408.0
 size_flags_vertical = 3
 offset_transform_enabled = true
 offset_transform_position = Vector2(9.51, 0)
@@ -431,3 +444,8 @@ theme_override_font_sizes/font_size = 48
 text = "Connect callers in need!"
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=1544337704]
+position = Vector2(-118.875, 19.624994)
+scale = Vector2(0.75619197, 0.9269911)
+texture = ExtResource("55_8lpvs")

@@ -36,4 +36,5 @@ func _on_chaos_limit_reached() -> void:
 
 func _open_game_over() -> void:
 	preload("res://Scenes/menu.gd").show_game_over = true
+	preload("res://Scenes/menu.gd").solved_problems = $Systems/events/EventScoreObserver.solved_problems
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

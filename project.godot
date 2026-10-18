@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 ECS="*uid://dfqwl5njvdnmq"
-SoundEffects="*res://Sound/sound_effects.tscn"
 
 [display]
 

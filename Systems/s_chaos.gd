@@ -3,8 +3,8 @@ extends System
 
 signal chaos_limit_reached
 
-@export_range(0.0, 100.0) var growth_per_empty_resource: float = 5
-@export_range(0.0, 100.0) var decay_per_second: float = 1
+@export_range(0.0, 100.0) var growth_per_empty_resource: float = 1
+@export_range(0.0, 100.0) var decay_per_second: float = 0.2
 
 var _game_over := false
 

@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="castle_village"]
 script = ExtResource("3_option")
-message = "Just throw food at them!"
+message = "Weaponize yesterday's bread!"
 resource_deltas = Dictionary[int, float]({
 0: -10.0,
 2: 15.0
@@ -14,7 +14,7 @@ resource_deltas = Dictionary[int, float]({
 
 [sub_resource type="Resource" id="castle_mage_tower"]
 script = ExtResource("3_option")
-message = "I just know the EXACT spell!"
+message = "One spell, zero safety checks!"
 resource_deltas = Dictionary[int, float]({
 2: 10.0,
 3: -15.0
@@ -22,7 +22,7 @@ resource_deltas = Dictionary[int, float]({
 
 [sub_resource type="Resource" id="castle_dragon_cave"]
 script = ExtResource("3_option")
-message = "Fire!!!"
+message = "Roast first, identify goblins later!"
 resource_deltas = Dictionary[int, float]({
 1: -20.0,
 4: 10.0
@@ -30,7 +30,7 @@ resource_deltas = Dictionary[int, float]({
 
 [sub_resource type="Resource" id="castle_city"]
 script = ExtResource("3_option")
-message = "What??"
+message = "Send help? In this economy?"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
 1: -5.0,
@@ -56,7 +56,7 @@ options = Dictionary[int, ExtResource("3_option")]({
 
 [sub_resource type="Resource" id="Resource_bu0y5"]
 script = ExtResource("3_option")
-message = "Take him for a walk!"
+message = "Fetch! Use the royal carriage!"
 resource_deltas = Dictionary[int, float]({
 1: -12.0,
 3: 20.0
@@ -66,7 +66,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_6a4tp"]
 script = ExtResource("3_option")
-message = "Please don't burn our houses!"
+message = "We hired a very expensive clown"
 resource_deltas = Dictionary[int, float]({
 0: 10.0,
 4: -30.0
@@ -75,7 +75,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_f3c8l"]
 script = ExtResource("3_option")
-message = "I'm sure I've seen a SLEEP spell somewhere!"
+message = "Steve, read the boring spell!"
 resource_deltas = Dictionary[int, float]({
 3: -15.0,
 4: 20.0
@@ -84,7 +84,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_631el"]
 script = ExtResource("3_option")
-message = "Send our best dancers!!!"
+message = "Our dancers charge danger money"
 resource_deltas = Dictionary[int, float]({
 1: 10.0,
 2: -5.0,
@@ -113,7 +113,7 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_bx8xc"]
 script = ExtResource("3_option")
-message = "Send our men!"
+message = "Build an ark. No unicorns!"
 resource_deltas = Dictionary[int, float]({
 0: 10.0,
 1: -20.0
@@ -123,31 +123,31 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_mt7ms"]
 script = ExtResource("3_option")
-message = "Once again! WE DON'T HAVE A WATER WIZARD!"
+message = "Steve drank the water spell!"
 resource_deltas = Dictionary[int, float]({
-0: -4.0,
-3: -4.0
+0: -20.0,
+3: -10.0
 })
 cooldown_seconds = 5.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_jmmyx"]
 script = ExtResource("3_option")
-message = "Fire!!"
+message = "Steam is basically dry water"
 resource_deltas = Dictionary[int, float]({
-0: -2.0,
+0: -10.0,
 1: -10.0,
-2: -2.0
+2: 5.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_mlrm6"]
 script = ExtResource("3_option")
-message = "Ha, drain pipes!"
+message = "Introducing: the royal toilet!"
 resource_deltas = Dictionary[int, float]({
 0: 15.0,
-1: -2.0,
-2: 5.0
+1: -20.0,
+2: 10.0
 })
 cooldown_seconds = 15.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -172,7 +172,7 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_0bgpu"]
 script = ExtResource("3_option")
-message = "Ha!"
+message = "Tax every drunken hiccup!"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
 2: -10.0,
@@ -183,16 +183,16 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_jlnml"]
 script = ExtResource("3_option")
-message = "Pass"
+message = "Finally, soup with benefits!"
 resource_deltas = Dictionary[int, float]({
-0: 5.0
+0: 15.0
 })
 cooldown_seconds = 2.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_mh0yw"]
 script = ExtResource("3_option")
-message = "In my way"
+message = "A toast! Oops, literal toast!"
 resource_deltas = Dictionary[int, float]({
 1: -20.0,
 3: 30.0
@@ -202,7 +202,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_utke1"]
 script = ExtResource("3_option")
-message = "Hurray"
+message = "Hangovers are tomorrow's problem"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
 3: 30.0
@@ -216,10 +216,10 @@ event_id = &"mage_party"
 location = 2
 message = "All the water is wine now! Let's celebrate!"
 cooldown_seconds = 10.0
-effect_duration = 5.0
+effect_duration = 20.0
 effect = Dictionary[int, float]({
-0: -1.0,
-3: 2.0
+0: -2.0,
+3: 4.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_0bgpu"),
@@ -231,7 +231,7 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_d27lm"]
 script = ExtResource("3_option")
-message = "Education, education, education & war!"
+message = "Have they tried being poorer?"
 resource_deltas = Dictionary[int, float]({
 1: 10.0,
 2: 5.0,
@@ -242,7 +242,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_jxi8j"]
 script = ExtResource("3_option")
-message = "You're joking, right?"
+message = "Our wallets are already hollow"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
 1: 10.0,
@@ -252,7 +252,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_yinm2"]
 script = ExtResource("3_option")
-message = "Middle class!"
+message = "Turn the rich into middle class!"
 resource_deltas = Dictionary[int, float]({
 1: 5.0,
 2: 3.0
@@ -262,7 +262,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_q4yot"]
 script = ExtResource("3_option")
-message = "Burn them all! Haha!"
+message = "I charge extra for class warfare"
 resource_deltas = Dictionary[int, float]({
 1: -10.0,
 3: -10.0,
@@ -280,7 +280,7 @@ effect_duration = 20.0
 effect = Dictionary[int, float]({
 0: -3.0
 })
-effect_period = 3.0
+effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_d27lm"),
 1: SubResource("Resource_jxi8j"),
@@ -291,7 +291,7 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_d0ny1"]
 script = ExtResource("3_option")
-message = "Yes, sir!"
+message = "Send Steve. He looks snack-sized!"
 resource_deltas = Dictionary[int, float]({
 0: -2.0,
 2: 20.0,
@@ -302,7 +302,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_h82vs"]
 script = ExtResource("3_option")
-message = "Steve, it's your turn!"
+message = "Steve, wear the chew-proof robe!"
 resource_deltas = Dictionary[int, float]({
 2: 10.0,
 4: -4.0
@@ -311,7 +311,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_jdg5n"]
 script = ExtResource("3_option")
-message = "Me too!"
+message = "I thought I was the river monster!"
 resource_deltas = Dictionary[int, float]({
 0: -10.0,
 3: 5.0
@@ -320,7 +320,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_fh8un"]
 script = ExtResource("3_option")
-message = "Let's see what we can do..."
+message = "Lunch delivery, scales included"
 resource_deltas = Dictionary[int, float]({
 0: -10.0,
 1: 10.0,
@@ -333,7 +333,7 @@ script = ExtResource("2_definition")
 event_id = &"castle_croco"
 message = "Someone has to feed that croco in the river!"
 cooldown_seconds = 10.0
-effect_duration = 5.0
+effect_duration = 20.0
 effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
 1: SubResource("Resource_d0ny1"),
@@ -345,38 +345,38 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_uiso3"]
 script = ExtResource("3_option")
-message = "We are the champions! No time for losers!"
+message = "Our champion is 80% mashed potato!"
 resource_deltas = Dictionary[int, float]({
-0: 5.0,
-2: -2.0,
-4: 10.0
+0: 6.0,
+2: -2.4,
+4: 12.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_34tev"]
 script = ExtResource("3_option")
-message = "Steve will participate!"
+message = "Steve, performance magic is legal!"
 resource_deltas = Dictionary[int, float]({
-1: 10.0,
-3: -5.0
+1: 12.0,
+3: -6.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_t65nc"]
 script = ExtResource("3_option")
-message = "Potato!"
+message = "I brought flame-grilled medals!"
 resource_deltas = Dictionary[int, float]({
-1: -10.0,
-4: 15.0
+1: -12.0,
+4: 18.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_roc6h"]
 script = ExtResource("3_option")
-message = "In this economy?"
+message = "Fine, but the potato needs sponsors"
 resource_deltas = Dictionary[int, float]({
-3: -10.0,
-4: -10.0
+3: -12.0,
+4: -12.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
@@ -387,7 +387,7 @@ location = 1
 message = "Annual potato games are officially on!!!"
 cooldown_seconds = 20.0
 effect = Dictionary[int, float]({
-0: -1.0
+0: -1.2
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_uiso3"),
@@ -399,29 +399,29 @@ metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
 [sub_resource type="Resource" id="Resource_ohexe"]
 script = ExtResource("3_option")
-message = "We send our best warrior to fight that!"
+message = "Send a knight! A very small knight!"
 resource_deltas = Dictionary[int, float]({
 0: 4.0,
 1: 30.0,
-2: -1.0
+2: -10.0
 })
 cooldown_seconds = 30.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_jq4kc"]
 script = ExtResource("3_option")
-message = "Steve, please don't die!"
+message = "Steve, try not to faint heroically!"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
 1: 10.0,
-4: 3.0
+4: 7.0
 })
 cooldown_seconds = 5.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_6l3in"]
 script = ExtResource("3_option")
-message = "I have paws!!!"
+message = "I can cauterize the whole Steve!"
 resource_deltas = Dictionary[int, float]({
 1: -10.0,
 3: 5.0,
@@ -432,7 +432,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_l6cgg"]
 script = ExtResource("3_option")
-message = "Steve, mommy loves you!"
+message = "Steve's mom demands a second opinion!"
 resource_deltas = Dictionary[int, float]({
 0: 3.0,
 3: 30.0,
@@ -447,7 +447,7 @@ event_id = &"mage_steve"
 location = 2
 message = "Steve has a hangnail, send a doctor"
 effect = Dictionary[int, float]({
-3: -1.0
+3: -4.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_ohexe"),
@@ -457,6 +457,1075 @@ options = Dictionary[int, ExtResource("3_option")]({
 })
 metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
+[sub_resource type="Resource" id="castle_geese_option_village"]
+script = ExtResource("3_option")
+message = "Bribe them with breadcrumbs"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+4: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="castle_geese_option_mage"]
+script = ExtResource("3_option")
+message = "Turn the crowns into ducks"
+resource_deltas = Dictionary[int, float]({
+3: -18.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="castle_geese_option_dragon"]
+script = ExtResource("3_option")
+message = "Honk louder!"
+resource_deltas = Dictionary[int, float]({
+0: -6.0,
+2: 12.0,
+4: 6.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="castle_geese_option_city"]
+script = ExtResource("3_option")
+message = "Sell them tiny thrones"
+resource_deltas = Dictionary[int, float]({
+1: -12.0,
+4: 30.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="castle_geese"]
+script = ExtResource("2_definition")
+event_id = &"castle_geese"
+message = "Geese stole the royal crowns!"
+effect_duration = 24.0
+effect = Dictionary[int, float]({
+2: -6.0,
+4: -6.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+1: SubResource("castle_geese_option_village"),
+2: SubResource("castle_geese_option_mage"),
+3: SubResource("castle_geese_option_dragon"),
+4: SubResource("castle_geese_option_city")
+})
+
+[sub_resource type="Resource" id="castle_soup_option_village"]
+script = ExtResource("3_option")
+message = "Bring the giant ladle"
+resource_deltas = Dictionary[int, float]({
+1: -12.0,
+2: 18.0
+})
+
+[sub_resource type="Resource" id="castle_soup_option_mage"]
+script = ExtResource("3_option")
+message = "Cast Drain Soup"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+2: 12.0,
+3: -24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="castle_soup_option_dragon"]
+script = ExtResource("3_option")
+message = "Boil them free!"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+2: 24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="castle_soup_option_city"]
+script = ExtResource("3_option")
+message = "Rent a soup pump"
+resource_deltas = Dictionary[int, float]({
+0: 12.0,
+2: 18.0,
+4: -24.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="castle_soup"]
+script = ExtResource("2_definition")
+event_id = &"castle_soup"
+message = "The knights are stuck in soup!"
+effect_duration = 22.0
+effect = Dictionary[int, float]({
+0: -12.0,
+2: -6.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+1: SubResource("castle_soup_option_village"),
+2: SubResource("castle_soup_option_mage"),
+3: SubResource("castle_soup_option_dragon"),
+4: SubResource("castle_soup_option_city")
+})
+
+[sub_resource type="Resource" id="castle_ghost_option_village"]
+script = ExtResource("3_option")
+message = "Offer a lifetime of turnips"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+4: 12.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="castle_ghost_option_mage"]
+script = ExtResource("3_option")
+message = "Audit his past lives"
+resource_deltas = Dictionary[int, float]({
+3: -18.0,
+4: 30.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="castle_ghost_option_dragon"]
+script = ExtResource("3_option")
+message = "Threaten to haunt him back"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+3: 12.0,
+4: 12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="castle_ghost_option_city"]
+script = ExtResource("3_option")
+message = "Pay him in expired coupons"
+resource_deltas = Dictionary[int, float]({
+3: 18.0,
+4: -6.0
+})
+
+[sub_resource type="Resource" id="castle_ghost"]
+script = ExtResource("2_definition")
+event_id = &"castle_ghost"
+message = "A ghost demands unpaid wages!"
+effect_duration = 28.0
+effect = Dictionary[int, float]({
+3: -6.0,
+4: -12.0
+})
+effect_period = 5.0
+options = Dictionary[int, ExtResource("3_option")]({
+1: SubResource("castle_ghost_option_village"),
+2: SubResource("castle_ghost_option_mage"),
+3: SubResource("castle_ghost_option_dragon"),
+4: SubResource("castle_ghost_option_city")
+})
+
+[sub_resource type="Resource" id="castle_jester_option_village"]
+script = ExtResource("3_option")
+message = "Crown a better scarecrow!"
+resource_deltas = Dictionary[int, float]({
+1: -18.0,
+2: 12.0,
+4: 12.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="castle_jester_option_mage"]
+script = ExtResource("3_option")
+message = "Summon a larger hat"
+resource_deltas = Dictionary[int, float]({
+3: -12.0,
+4: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="castle_jester_option_dragon"]
+script = ExtResource("3_option")
+message = "Laugh. With fire!"
+resource_deltas = Dictionary[int, float]({
+1: -12.0,
+2: 24.0
+})
+
+[sub_resource type="Resource" id="castle_jester_option_city"]
+script = ExtResource("3_option")
+message = "Charge him royal rent"
+resource_deltas = Dictionary[int, float]({
+0: -6.0,
+4: 24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="castle_jester"]
+script = ExtResource("2_definition")
+event_id = &"castle_jester"
+message = "The jester declared himself king!"
+effect_duration = 26.0
+effect = Dictionary[int, float]({
+2: -6.0,
+4: -12.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+1: SubResource("castle_jester_option_village"),
+2: SubResource("castle_jester_option_mage"),
+3: SubResource("castle_jester_option_dragon"),
+4: SubResource("castle_jester_option_city")
+})
+
+[sub_resource type="Resource" id="village_giant_potato_option_castle"]
+script = ExtResource("3_option")
+message = "Send the royal potato guard!"
+resource_deltas = Dictionary[int, float]({
+0: 24.0,
+2: -18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="village_giant_potato_option_mage"]
+script = ExtResource("3_option")
+message = "Shrink it. Mostly"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+3: -12.0
+})
+
+[sub_resource type="Resource" id="village_giant_potato_option_dragon"]
+script = ExtResource("3_option")
+message = "Make the world's largest fry!"
+resource_deltas = Dictionary[int, float]({
+0: 30.0,
+1: -12.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="village_giant_potato_option_city"]
+script = ExtResource("3_option")
+message = "Sell tickets to the potato"
+resource_deltas = Dictionary[int, float]({
+0: -6.0,
+4: 24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="village_giant_potato"]
+script = ExtResource("2_definition")
+event_id = &"village_giant_potato"
+location = 1
+message = "A giant potato is blocking the well!"
+effect_duration = 25.0
+effect = Dictionary[int, float]({
+0: -12.0,
+1: -6.0
+})
+effect_period = 5.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("village_giant_potato_option_castle"),
+2: SubResource("village_giant_potato_option_mage"),
+3: SubResource("village_giant_potato_option_dragon"),
+4: SubResource("village_giant_potato_option_city")
+})
+
+[sub_resource type="Resource" id="village_chicken_union_option_castle"]
+script = ExtResource("3_option")
+message = "Knight the head chicken!"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+2: -12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="village_chicken_union_option_mage"]
+script = ExtResource("3_option")
+message = "Teach eggs to hatch early"
+resource_deltas = Dictionary[int, float]({
+0: 24.0,
+3: -18.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="village_chicken_union_option_dragon"]
+script = ExtResource("3_option")
+message = "Cover their Monday shift"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+1: 18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="village_chicken_union_option_city"]
+script = ExtResource("3_option")
+message = "Offer a corn bonus"
+resource_deltas = Dictionary[int, float]({
+0: 30.0,
+4: -18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="village_chicken_union"]
+script = ExtResource("2_definition")
+event_id = &"village_chicken_union"
+location = 1
+message = "The chickens demand weekends!"
+effect_duration = 23.0
+effect = Dictionary[int, float]({
+0: -6.0,
+4: -6.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("village_chicken_union_option_castle"),
+2: SubResource("village_chicken_union_option_mage"),
+3: SubResource("village_chicken_union_option_dragon"),
+4: SubResource("village_chicken_union_option_city")
+})
+
+[sub_resource type="Resource" id="village_walking_cottages_option_castle"]
+script = ExtResource("3_option")
+message = "Arrest the fastest cottage!"
+resource_deltas = Dictionary[int, float]({
+1: 24.0,
+2: -12.0
+})
+
+[sub_resource type="Resource" id="village_walking_cottages_option_mage"]
+script = ExtResource("3_option")
+message = "Put the village on a leash"
+resource_deltas = Dictionary[int, float]({
+1: 30.0,
+3: -24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="village_walking_cottages_option_dragon"]
+script = ExtResource("3_option")
+message = "Sit on the town square"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+1: 18.0,
+4: 12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="village_walking_cottages_option_city"]
+script = ExtResource("3_option")
+message = "Charge a parking fee"
+resource_deltas = Dictionary[int, float]({
+1: -6.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="village_walking_cottages"]
+script = ExtResource("2_definition")
+event_id = &"village_walking_cottages"
+location = 1
+message = "Our cottages have grown legs!"
+effect_duration = 27.0
+effect = Dictionary[int, float]({
+1: -12.0,
+4: -6.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("village_walking_cottages_option_castle"),
+2: SubResource("village_walking_cottages_option_mage"),
+3: SubResource("village_walking_cottages_option_dragon"),
+4: SubResource("village_walking_cottages_option_city")
+})
+
+[sub_resource type="Resource" id="village_turnip_mayor_option_castle"]
+script = ExtResource("3_option")
+message = "Demand a royal salad"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+2: -6.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="village_turnip_mayor_option_mage"]
+script = ExtResource("3_option")
+message = "Give it a tiny brain"
+resource_deltas = Dictionary[int, float]({
+3: -18.0,
+4: 24.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="village_turnip_mayor_option_dragon"]
+script = ExtResource("3_option")
+message = "Eat the opposition!"
+resource_deltas = Dictionary[int, float]({
+0: -6.0,
+2: 12.0,
+4: 12.0
+})
+
+[sub_resource type="Resource" id="village_turnip_mayor_option_city"]
+script = ExtResource("3_option")
+message = "Sell campaign fertilizer"
+resource_deltas = Dictionary[int, float]({
+1: -12.0,
+4: 30.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="village_turnip_mayor"]
+script = ExtResource("2_definition")
+event_id = &"village_turnip_mayor"
+location = 1
+message = "A turnip has been elected mayor!"
+effect_duration = 30.0
+effect = Dictionary[int, float]({
+0: 6.0,
+4: -12.0
+})
+effect_period = 6.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("village_turnip_mayor_option_castle"),
+2: SubResource("village_turnip_mayor_option_mage"),
+3: SubResource("village_turnip_mayor_option_dragon"),
+4: SubResource("village_turnip_mayor_option_city")
+})
+
+[sub_resource type="Resource" id="mage_frog_teapot_option_castle"]
+script = ExtResource("3_option")
+message = "Draft the frogs!"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+2: 24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="mage_frog_teapot_option_village"]
+script = ExtResource("3_option")
+message = "Trade flies for tea"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+3: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="mage_frog_teapot_option_dragon"]
+script = ExtResource("3_option")
+message = "Steam it into submission"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+3: 24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="mage_frog_teapot_option_city"]
+script = ExtResource("3_option")
+message = "Open a frog cafe"
+resource_deltas = Dictionary[int, float]({
+1: -18.0,
+4: 30.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="mage_frog_teapot"]
+script = ExtResource("2_definition")
+event_id = &"mage_frog_teapot"
+location = 2
+message = "The teapot keeps summoning frogs!"
+effect_duration = 21.0
+effect = Dictionary[int, float]({
+0: 6.0,
+3: -12.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("mage_frog_teapot_option_castle"),
+1: SubResource("mage_frog_teapot_option_village"),
+3: SubResource("mage_frog_teapot_option_dragon"),
+4: SubResource("mage_frog_teapot_option_city")
+})
+
+[sub_resource type="Resource" id="mage_biting_books_option_castle"]
+script = ExtResource("3_option")
+message = "Issue tiny book muzzles"
+resource_deltas = Dictionary[int, float]({
+1: 18.0,
+2: -12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="mage_biting_books_option_village"]
+script = ExtResource("3_option")
+message = "Feed them old recipes"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+3: 18.0
+})
+
+[sub_resource type="Resource" id="mage_biting_books_option_dragon"]
+script = ExtResource("3_option")
+message = "Read them a scary story!"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+3: 24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="mage_biting_books_option_city"]
+script = ExtResource("3_option")
+message = "Sell bite insurance"
+resource_deltas = Dictionary[int, float]({
+1: 24.0,
+3: 6.0,
+4: -12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="mage_biting_books"]
+script = ExtResource("2_definition")
+event_id = &"mage_biting_books"
+location = 2
+message = "The books are biting again!"
+effect_duration = 24.0
+effect = Dictionary[int, float]({
+1: -12.0,
+3: -6.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("mage_biting_books_option_castle"),
+1: SubResource("mage_biting_books_option_village"),
+3: SubResource("mage_biting_books_option_dragon"),
+4: SubResource("mage_biting_books_option_city")
+})
+
+[sub_resource type="Resource" id="mage_moon_rental_option_castle"]
+script = ExtResource("3_option")
+message = "Declare it royal property"
+resource_deltas = Dictionary[int, float]({
+2: -18.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="mage_moon_rental_option_village"]
+script = ExtResource("3_option")
+message = "Pay the rent in cheese!"
+resource_deltas = Dictionary[int, float]({
+0: -24.0,
+4: 30.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="mage_moon_rental_option_dragon"]
+script = ExtResource("3_option")
+message = "Hide it under your wing"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+3: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="mage_moon_rental_option_city"]
+script = ExtResource("3_option")
+message = "Sublet it to werewolves"
+resource_deltas = Dictionary[int, float]({
+3: -12.0,
+4: 36.0
+})
+
+[sub_resource type="Resource" id="mage_moon_rental"]
+script = ExtResource("2_definition")
+event_id = &"mage_moon_rental"
+location = 2
+message = "Steve accidentally rented the moon!"
+effect_duration = 29.0
+effect = Dictionary[int, float]({
+3: 6.0,
+4: -18.0
+})
+effect_period = 5.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("mage_moon_rental_option_castle"),
+1: SubResource("mage_moon_rental_option_village"),
+3: SubResource("mage_moon_rental_option_dragon"),
+4: SubResource("mage_moon_rental_option_city")
+})
+
+[sub_resource type="Resource" id="mage_bad_mirrors_option_castle"]
+script = ExtResource("3_option")
+message = "Make them military advisors"
+resource_deltas = Dictionary[int, float]({
+2: 18.0,
+4: -12.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="mage_bad_mirrors_option_village"]
+script = ExtResource("3_option")
+message = "Face them toward the sheep"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+3: 18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="mage_bad_mirrors_option_dragon"]
+script = ExtResource("3_option")
+message = "Show them a scarier face"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+2: 12.0,
+3: 12.0
+})
+
+[sub_resource type="Resource" id="mage_bad_mirrors_option_city"]
+script = ExtResource("3_option")
+message = "Sell them as life coaches"
+resource_deltas = Dictionary[int, float]({
+3: -6.0,
+4: 30.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="mage_bad_mirrors"]
+script = ExtResource("2_definition")
+event_id = &"mage_bad_mirrors"
+location = 2
+message = "The mirrors are giving bad advice!"
+effect_duration = 26.0
+effect = Dictionary[int, float]({
+2: -6.0,
+3: -12.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("mage_bad_mirrors_option_castle"),
+1: SubResource("mage_bad_mirrors_option_village"),
+3: SubResource("mage_bad_mirrors_option_dragon"),
+4: SubResource("mage_bad_mirrors_option_city")
+})
+
+[sub_resource type="Resource" id="dragon_hiccups_option_castle"]
+script = ExtResource("3_option")
+message = "Scare him with a tax form"
+resource_deltas = Dictionary[int, float]({
+2: 24.0,
+4: -12.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="dragon_hiccups_option_village"]
+script = ExtResource("3_option")
+message = "Bring a barrel of milk"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+2: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="dragon_hiccups_option_mage"]
+script = ExtResource("3_option")
+message = "Send the hiccups to Steve!"
+resource_deltas = Dictionary[int, float]({
+1: 12.0,
+2: 24.0,
+3: -24.0
+})
+
+[sub_resource type="Resource" id="dragon_hiccups_option_city"]
+script = ExtResource("3_option")
+message = "Switch to stone spoons"
+resource_deltas = Dictionary[int, float]({
+2: 30.0,
+4: -18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="dragon_hiccups"]
+script = ExtResource("2_definition")
+event_id = &"dragon_hiccups"
+location = 3
+message = "My hiccups keep melting the spoons!"
+effect_duration = 22.0
+effect = Dictionary[int, float]({
+1: -6.0,
+2: -12.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("dragon_hiccups_option_castle"),
+1: SubResource("dragon_hiccups_option_village"),
+2: SubResource("dragon_hiccups_option_mage"),
+4: SubResource("dragon_hiccups_option_city")
+})
+
+[sub_resource type="Resource" id="dragon_sneeze_option_castle"]
+script = ExtResource("3_option")
+message = "Send the fire brigade!"
+resource_deltas = Dictionary[int, float]({
+1: 18.0,
+2: -12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="dragon_sneeze_option_village"]
+script = ExtResource("3_option")
+message = "Plant fireproof cabbages"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+1: 24.0
+})
+
+[sub_resource type="Resource" id="dragon_sneeze_option_mage"]
+script = ExtResource("3_option")
+message = "Cast Unburn!"
+resource_deltas = Dictionary[int, float]({
+1: 30.0,
+3: -24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="dragon_sneeze_option_city"]
+script = ExtResource("3_option")
+message = "Sell premium charcoal"
+resource_deltas = Dictionary[int, float]({
+1: -6.0,
+4: 30.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="dragon_sneeze"]
+script = ExtResource("2_definition")
+event_id = &"dragon_sneeze"
+location = 3
+message = "I sneezed. The forest is toast!"
+effect_duration = 25.0
+effect = Dictionary[int, float]({
+0: -6.0,
+1: -12.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("dragon_sneeze_option_castle"),
+1: SubResource("dragon_sneeze_option_village"),
+2: SubResource("dragon_sneeze_option_mage"),
+4: SubResource("dragon_sneeze_option_city")
+})
+
+[sub_resource type="Resource" id="dragon_duck_hoard_option_castle"]
+script = ExtResource("3_option")
+message = "Adopt a royal duck squad"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+2: 18.0
+})
+
+[sub_resource type="Resource" id="dragon_duck_hoard_option_village"]
+script = ExtResource("3_option")
+message = "Build a very secure pond"
+resource_deltas = Dictionary[int, float]({
+1: -24.0,
+4: 24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="dragon_duck_hoard_option_mage"]
+script = ExtResource("3_option")
+message = "Reverse the duckification!"
+resource_deltas = Dictionary[int, float]({
+3: -30.0,
+4: 36.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="dragon_duck_hoard_option_city"]
+script = ExtResource("3_option")
+message = "Open a duck bank"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+4: 30.0
+})
+
+[sub_resource type="Resource" id="dragon_duck_hoard"]
+script = ExtResource("2_definition")
+event_id = &"dragon_duck_hoard"
+location = 3
+message = "My treasure hatched into ducklings!"
+effect_duration = 28.0
+effect = Dictionary[int, float]({
+0: -6.0,
+4: -12.0
+})
+effect_period = 5.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("dragon_duck_hoard_option_castle"),
+1: SubResource("dragon_duck_hoard_option_village"),
+2: SubResource("dragon_duck_hoard_option_mage"),
+4: SubResource("dragon_duck_hoard_option_city")
+})
+
+[sub_resource type="Resource" id="dragon_lava_bakery_option_castle"]
+script = ExtResource("3_option")
+message = "Test the armor-proof buns"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+2: -12.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="dragon_lava_bakery_option_village"]
+script = ExtResource("3_option")
+message = "Bring oven mitts. Big ones"
+resource_deltas = Dictionary[int, float]({
+0: 24.0,
+1: -18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="dragon_lava_bakery_option_mage"]
+script = ExtResource("3_option")
+message = "Enchant the sourdough!"
+resource_deltas = Dictionary[int, float]({
+0: 30.0,
+3: -24.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="dragon_lava_bakery_option_city"]
+script = ExtResource("3_option")
+message = "Market it as spicy"
+resource_deltas = Dictionary[int, float]({
+0: -6.0,
+4: 24.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="dragon_lava_bakery"]
+script = ExtResource("2_definition")
+event_id = &"dragon_lava_bakery"
+location = 3
+message = "I opened a bakery. Everything is lava!"
+effect_duration = 30.0
+effect = Dictionary[int, float]({
+0: -12.0,
+4: 6.0
+})
+effect_period = 6.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("dragon_lava_bakery_option_castle"),
+1: SubResource("dragon_lava_bakery_option_village"),
+2: SubResource("dragon_lava_bakery_option_mage"),
+4: SubResource("dragon_lava_bakery_option_city")
+})
+
+[sub_resource type="Resource" id="city_rat_guild_option_castle"]
+script = ExtResource("3_option")
+message = "Inspect their cheese licenses"
+resource_deltas = Dictionary[int, float]({
+2: -12.0,
+4: 18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="city_rat_guild_option_village"]
+script = ExtResource("3_option")
+message = "Bribe the cheese chairman!"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+4: 24.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="city_rat_guild_option_mage"]
+script = ExtResource("3_option")
+message = "Summon a tiny accountant"
+resource_deltas = Dictionary[int, float]({
+3: -18.0,
+4: 30.0
+})
+
+[sub_resource type="Resource" id="city_rat_guild_option_dragon"]
+script = ExtResource("3_option")
+message = "Renegotiate with smoke"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+2: 6.0,
+4: 18.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="city_rat_guild"]
+script = ExtResource("2_definition")
+event_id = &"city_rat_guild"
+location = 4
+message = "The rats formed a merchant guild!"
+effect_duration = 23.0
+effect = Dictionary[int, float]({
+0: -6.0,
+4: -12.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("city_rat_guild_option_castle"),
+1: SubResource("city_rat_guild_option_village"),
+2: SubResource("city_rat_guild_option_mage"),
+3: SubResource("city_rat_guild_option_dragon")
+})
+
+[sub_resource type="Resource" id="city_runaway_coins_option_castle"]
+script = ExtResource("3_option")
+message = "Post guards at the hill"
+resource_deltas = Dictionary[int, float]({
+2: -12.0,
+4: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="city_runaway_coins_option_village"]
+script = ExtResource("3_option")
+message = "Catch them in potato sacks"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="city_runaway_coins_option_mage"]
+script = ExtResource("3_option")
+message = "Turn gravity off and on!"
+resource_deltas = Dictionary[int, float]({
+3: -24.0,
+4: 30.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="city_runaway_coins_option_dragon"]
+script = ExtResource("3_option")
+message = "Sit on the treasury"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+4: 24.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="city_runaway_coins"]
+script = ExtResource("2_definition")
+event_id = &"city_runaway_coins"
+location = 4
+message = "The coins keep rolling uphill!"
+effect_duration = 27.0
+effect = Dictionary[int, float]({
+1: -6.0,
+4: -12.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("city_runaway_coins_option_castle"),
+1: SubResource("city_runaway_coins_option_village"),
+2: SubResource("city_runaway_coins_option_mage"),
+3: SubResource("city_runaway_coins_option_dragon")
+})
+
+[sub_resource type="Resource" id="city_statue_salary_option_castle"]
+script = ExtResource("3_option")
+message = "Make it an unpaid knight"
+resource_deltas = Dictionary[int, float]({
+2: -12.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="city_statue_salary_option_village"]
+script = ExtResource("3_option")
+message = "Pay it in birdseed"
+resource_deltas = Dictionary[int, float]({
+0: -18.0,
+3: 12.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="city_statue_salary_option_mage"]
+script = ExtResource("3_option")
+message = "Remind it that it is stone"
+resource_deltas = Dictionary[int, float]({
+3: -18.0,
+4: 30.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="city_statue_salary_option_dragon"]
+script = ExtResource("3_option")
+message = "Melt its job description!"
+resource_deltas = Dictionary[int, float]({
+1: -12.0,
+3: 6.0,
+4: 18.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="city_statue_salary"]
+script = ExtResource("2_definition")
+event_id = &"city_statue_salary"
+location = 4
+message = "The mayor's statue wants a salary!"
+effect_duration = 24.0
+effect = Dictionary[int, float]({
+3: -6.0,
+4: -18.0
+})
+effect_period = 4.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("city_statue_salary_option_castle"),
+1: SubResource("city_statue_salary_option_village"),
+2: SubResource("city_statue_salary_option_mage"),
+3: SubResource("city_statue_salary_option_dragon")
+})
+
+[sub_resource type="Resource" id="city_loud_mimes_option_castle"]
+script = ExtResource("3_option")
+message = "Send the silent guard"
+resource_deltas = Dictionary[int, float]({
+1: 24.0,
+2: -18.0
+})
+cooldown_seconds = 25.0
+
+[sub_resource type="Resource" id="city_loud_mimes_option_village"]
+script = ExtResource("3_option")
+message = "Distract them with real walls"
+resource_deltas = Dictionary[int, float]({
+0: 18.0,
+1: -18.0
+})
+cooldown_seconds = 10.0
+
+[sub_resource type="Resource" id="city_loud_mimes_option_mage"]
+script = ExtResource("3_option")
+message = "Cast Actual Silence!"
+resource_deltas = Dictionary[int, float]({
+1: 18.0,
+3: -24.0,
+4: 12.0
+})
+cooldown_seconds = 15.0
+
+[sub_resource type="Resource" id="city_loud_mimes_option_dragon"]
+script = ExtResource("3_option")
+message = "Whisper very threateningly!"
+resource_deltas = Dictionary[int, float]({
+0: -12.0,
+4: 24.0
+})
+
+[sub_resource type="Resource" id="city_loud_mimes"]
+script = ExtResource("2_definition")
+event_id = &"city_loud_mimes"
+location = 4
+message = "The mime festival is getting loud!"
+effect_duration = 29.0
+effect = Dictionary[int, float]({
+0: -6.0,
+1: -12.0
+})
+effect_period = 5.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("city_loud_mimes_option_castle"),
+1: SubResource("city_loud_mimes_option_village"),
+2: SubResource("city_loud_mimes_option_mage"),
+3: SubResource("city_loud_mimes_option_dragon")
+})
+
 [resource]
 script = ExtResource("1_catalog")
-events = Array[ExtResource("2_definition")]([SubResource("castle_gate"), SubResource("Resource_d33pv"), SubResource("Resource_eg6ko"), SubResource("Resource_1opkm"), SubResource("Resource_0j036"), SubResource("Resource_bwii0"), SubResource("Resource_7lcyc"), SubResource("Resource_etabg")])
+events = Array[ExtResource("2_definition")]([SubResource("castle_gate"), SubResource("Resource_d33pv"), SubResource("Resource_eg6ko"), SubResource("Resource_1opkm"), SubResource("Resource_0j036"), SubResource("Resource_bwii0"), SubResource("Resource_7lcyc"), SubResource("Resource_etabg"), SubResource("castle_geese"), SubResource("castle_soup"), SubResource("castle_ghost"), SubResource("castle_jester"), SubResource("village_giant_potato"), SubResource("village_chicken_union"), SubResource("village_walking_cottages"), SubResource("village_turnip_mayor"), SubResource("mage_frog_teapot"), SubResource("mage_biting_books"), SubResource("mage_moon_rental"), SubResource("mage_bad_mirrors"), SubResource("dragon_hiccups"), SubResource("dragon_sneeze"), SubResource("dragon_duck_hoard"), SubResource("dragon_lava_bakery"), SubResource("city_rat_guild"), SubResource("city_runaway_coins"), SubResource("city_statue_salary"), SubResource("city_loud_mimes")])

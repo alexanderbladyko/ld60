@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://pdt4p1r1cpgk"]
 
 [ext_resource type="Script" path="res://Sound/sound_effects.gd" id="1_sound_effects"]
 
-[node name="SoundEffects" type="Node"]
+[node name="SoundEffects" type="Node" unique_id=1113683329]
 script = ExtResource("1_sound_effects")
