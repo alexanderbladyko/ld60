@@ -41,6 +41,8 @@
 [ext_resource type="Script" uid="uid://ce8o5t374340x" path="res://Systems/o_location_cooldown.gd" id="40_cooldown_observer"]
 [ext_resource type="Script" uid="uid://r70rao8ks2se" path="res://Systems/s_pin_effect_preview.gd" id="41_pin_effect_preview"]
 [ext_resource type="Script" uid="uid://csdgeahc0w2kg" path="res://Systems/s_chaos.gd" id="42_chaos"]
+[ext_resource type="PackedScene" path="res://Scenes/chaos_vignette.tscn" id="43_vignette"]
+[ext_resource type="Script" path="res://Systems/o_chaos_vignette.gd" id="44_vignette_observer"]
 [ext_resource type="Script" uid="uid://cwgs6e0bqs0p5" path="res://Components/c_chaos_resource.gd" id="stock_chaos"]
 [ext_resource type="Script" uid="uid://batmyw1junnej" path="res://Components/c_food_resource.gd" id="stock_food"]
 [ext_resource type="Script" uid="uid://b4ernqwnkn3om" path="res://Components/c_gold_resource.gd" id="stock_gold"]
@@ -48,107 +50,107 @@
 [ext_resource type="Script" uid="uid://dcik8m7bkqdy8" path="res://Components/c_weapons_resource.gd" id="stock_weapons"]
 [ext_resource type="Script" uid="uid://dqrpmj4o7jsn0" path="res://Components/c_wood_resource.gd" id="stock_wood"]
 
-[sub_resource type="Resource" id="Resource_32sfa"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-
 [sub_resource type="Resource" id="Resource_titue"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 4
 
 [sub_resource type="Resource" id="Resource_tt7mg"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 3
+location = 4
 
 [sub_resource type="Resource" id="Resource_htg8p"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
+script = ExtResource("5_h4fw4")
 location = 3
 
 [sub_resource type="Resource" id="Resource_jcvim"]
 resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 2
+script = ExtResource("5_ewbju")
+location = 3
 
 [sub_resource type="Resource" id="Resource_fnkle"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 1
+location = 2
 
 [sub_resource type="Resource" id="Resource_wr3wg"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
+script = ExtResource("5_h4fw4")
+location = 1
 
 [sub_resource type="Resource" id="Resource_6xvgv"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 4
 
 [sub_resource type="Resource" id="Resource_8lpvs"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 2
+location = 4
 
 [sub_resource type="Resource" id="Resource_x6jpx"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 1
+location = 2
 
 [sub_resource type="Resource" id="Resource_sjh24"]
 resource_local_to_scene = true
-script = ExtResource("stock_food")
+script = ExtResource("5_ewbju")
+location = 1
 
 [sub_resource type="Resource" id="Resource_k5jl5"]
+resource_local_to_scene = true
+script = ExtResource("stock_food")
+
+[sub_resource type="Resource" id="Resource_nqk4g"]
 resource_local_to_scene = true
 script = ExtResource("stock_wood")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_nqk4g"]
+[sub_resource type="Resource" id="Resource_fh6x0"]
 resource_local_to_scene = true
 script = ExtResource("stock_weapons")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_fh6x0"]
+[sub_resource type="Resource" id="Resource_j0obb"]
 resource_local_to_scene = true
 script = ExtResource("stock_mana")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_j0obb"]
+[sub_resource type="Resource" id="Resource_nfavm"]
 resource_local_to_scene = true
 script = ExtResource("stock_gold")
 resource = 4
 
-[sub_resource type="Resource" id="Resource_nfavm"]
-resource_local_to_scene = true
-script = ExtResource("stock_chaos")
-
 [sub_resource type="Resource" id="Resource_jcn4n"]
 resource_local_to_scene = true
-script = ExtResource("19_resource_binding")
+script = ExtResource("stock_chaos")
 
 [sub_resource type="Resource" id="Resource_l4kai"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 1
 
 [sub_resource type="Resource" id="Resource_kcoun"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 2
+resource = 1
 
 [sub_resource type="Resource" id="Resource_jegl3"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 3
+resource = 2
 
 [sub_resource type="Resource" id="Resource_csv17"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
-resource = 4
+resource = 3
 
 [sub_resource type="Resource" id="Resource_6i05k"]
+resource_local_to_scene = true
+script = ExtResource("19_resource_binding")
+resource = 4
+
+[sub_resource type="Resource" id="Resource_1kfie"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 5
@@ -183,46 +185,46 @@ metadata/_custom_type_script = "uid://cdu5tlyk72uu4"
 
 [node name="CastlePin" parent="Entities" unique_id=861097526 instance=ExtResource("3_o5yvi")]
 position = Vector2(72, 590)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_32sfa")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_titue")])
 
 [node name="CityPin" parent="Entities" unique_id=524521090 instance=ExtResource("6_rku1e")]
 position = Vector2(798, 590)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_titue")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_tt7mg")])
 
 [node name="DragonCavePin" parent="Entities" unique_id=1908340287 instance=ExtResource("7_rfjv2")]
 position = Vector2(1048, 590)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_tt7mg")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_htg8p")])
 
 [node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
 position = Vector2(1040, 362)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_htg8p")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim")])
 
 [node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
 position = Vector2(327, 590)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
 
 [node name="VillagePin" parent="Entities" unique_id=2026254875 instance=ExtResource("9_nb51f")]
 position = Vector2(559, 590)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
 
 [node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
 position = Vector2(105.831055, 411.39838)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv")])
 
 [node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
 position = Vector2(793.83105, 369.39838)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_8lpvs")])
 
 [node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
 position = Vector2(328.83105, 384.39838)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_8lpvs")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
 
 [node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
 position = Vector2(555, 386)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24")])
 
 [node name="ResourceStorage" parent="Entities" unique_id=637124255 instance=ExtResource("20_resource_storage")]
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24"), SubResource("Resource_k5jl5"), SubResource("Resource_nqk4g"), SubResource("Resource_fh6x0"), SubResource("Resource_j0obb"), SubResource("Resource_nfavm")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_k5jl5"), SubResource("Resource_nqk4g"), SubResource("Resource_fh6x0"), SubResource("Resource_j0obb"), SubResource("Resource_nfavm"), SubResource("Resource_jcn4n")])
 
 [node name="FoodView" parent="Entities" unique_id=1665693487 instance=ExtResource("18_resource_view")]
 offset_left = 470.0
@@ -231,7 +233,7 @@ offset_right = 608.0
 offset_bottom = 94.0
 fill_color = Color(0.9882353, 0.827451, 0.3019608, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcn4n")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_l4kai")])
 
 [node name="WoodView" parent="Entities" unique_id=1551522710 instance=ExtResource("18_resource_view")]
 offset_left = 274.0
@@ -240,7 +242,7 @@ offset_right = 394.0
 offset_bottom = 94.0
 fill_color = Color(0.4862745, 0.1764706, 0.07058824, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_l4kai")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_kcoun")])
 
 [node name="WeaponsView" parent="Entities" unique_id=1066766489 instance=ExtResource("18_resource_view")]
 offset_left = 87.0
@@ -249,7 +251,7 @@ offset_right = 207.0
 offset_bottom = 94.0
 fill_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_kcoun")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jegl3")])
 
 [node name="ManaView" parent="Entities" unique_id=1455940605 instance=ExtResource("18_resource_view")]
 offset_left = 687.0
@@ -258,7 +260,7 @@ offset_right = 807.0
 offset_bottom = 94.0
 fill_color = Color(0.007843138, 0.5176471, 0.78039217, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jegl3")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_csv17")])
 
 [node name="GoldView" parent="Entities" unique_id=40109464 instance=ExtResource("18_resource_view")]
 offset_left = 871.0
@@ -267,7 +269,7 @@ offset_right = 991.0
 offset_bottom = 94.0
 fill_color = Color(0.7921569, 0.5411765, 0.015686275, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_csv17")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6i05k")])
 
 [node name="ChaosView" parent="Entities" unique_id=1073779943 instance=ExtResource("18_resource_view")]
 offset_left = 84.0
@@ -276,9 +278,10 @@ offset_right = 990.0
 offset_bottom = 36.0
 fill_color = Color(0.74509805, 0.09411765, 0.3647059, 1)
 background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6i05k")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_1kfie")])
 
 [node name="LocationEventView" parent="." unique_id=1116405939 instance=ExtResource("26_event_view")]
+visible = false
 offset_left = 67.0
 offset_top = 803.0
 offset_right = 1038.0
@@ -322,6 +325,11 @@ yield_existing = true
 
 [node name="ResourceViewObserver" type="Node" parent="Systems/events" unique_id=58712318]
 script = ExtResource("17_resource_observer")
+yield_existing = true
+
+[node name="ChaosVignetteObserver" type="Node" parent="Systems/events"]
+script = ExtResource("44_vignette_observer")
+vignette_view = NodePath("../../../ChaosOverlay/Vignette")
 yield_existing = true
 
 [node name="LocationEventsSystem" type="Node" parent="Systems/events" unique_id=1189733488]
@@ -374,3 +382,5 @@ group = &"cleanup"
 script = ExtResource("37_lmoi6")
 group = &"cleanup"
 metadata/_custom_type_script = "uid://b8hqjj1l8hi54"
+
+[node name="ChaosOverlay" parent="." instance=ExtResource("43_vignette")]

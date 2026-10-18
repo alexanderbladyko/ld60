@@ -66,7 +66,7 @@ func process(pins: Array[Entity], _components: Array, _delta: float) -> void:
 			var change: float = option.resource_deltas.get(resource_type, 0.0)
 			if not is_finite(change) or is_zero_approx(change):
 				continue
-			var row := EFFECT_VIEW.instantiate() as HBoxContainer
+			var row := EFFECT_VIEW.instantiate() as Control
 			var icon := row.get_node("Icon") as TextureRect
 			icon.texture = ResourceIcons.TEXTURES[resource_type]
 			var direction := row.get_node("Direction") as Label

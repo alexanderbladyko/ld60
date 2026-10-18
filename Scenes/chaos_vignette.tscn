@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://q1wws1m1k2oo"]
+
+[ext_resource type="Shader" uid="uid://ddk0p8jcdc5q7" path="res://Shaders/chaos_vignette.gdshader" id="1_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+resource_local_to_scene = true
+shader = ExtResource("1_shader")
+shader_parameter/tint = Color(0.85, 0.015, 0.025, 1)
+shader_parameter/intensity = 0.0
+
+[node name="ChaosOverlay" type="CanvasLayer" unique_id=1021982805]
+layer = 100
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=1902725563]
+z_index = 2000
+material = SubResource("ShaderMaterial_vignette")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
