@@ -2,16 +2,12 @@ class_name LocationEventsSystem
 extends System
 
 @export var catalog: LocationEventCatalog
-@export_range(0.1, 300.0) var minimum_interval: float = 5.0
-@export_range(0.1, 300.0) var maximum_interval: float = 12.0
+@export_range(0.1, 300.0) var minimum_interval: float = 10.0
+@export_range(0.1, 300.0) var maximum_interval: float = 15.0
 @export_range(0.1, 300.0) var start_interval: float = 2.0
 
 var random := RandomNumberGenerator.new()
 var time_until_next_event: float = 0.0
-
-
-func deps() -> Dictionary[int, Array]:
-	return {Runs.After: [EventResolutionSystem], Runs.Before: []}
 
 
 func setup() -> void:

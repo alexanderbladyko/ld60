@@ -1,28 +1,34 @@
 [gd_scene format=3 uid="uid://dglddnqbxba1e"]
 
-[node name="ResourceEffectView" type="Control" unique_id=480213596]
-custom_minimum_size = Vector2(50, 24)
+[node name="ResourceEffectView" type="HBoxContainer" unique_id=480213596]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 56.0
 offset_bottom = 45.0
 mouse_filter = 2
+theme_override_constants/separation = 2
 
 [node name="Icon" type="TextureRect" parent="." unique_id=1997091763]
 custom_minimum_size = Vector2(32, 32)
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 45.0
+layout_mode = 2
 mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Direction" type="Label" parent="." unique_id=686668126]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 0
-offset_left = 22.0
-offset_top = 9.0
-offset_right = 42.0
-offset_bottom = 54.0
-theme_override_font_sizes/font_size = 32
-horizontal_alignment = 1
+[node name="Direction" type="TextureRect" parent="." unique_id=686668126]
+custom_minimum_size = Vector2(16, 24)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SecondDirection" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(16, 24)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5

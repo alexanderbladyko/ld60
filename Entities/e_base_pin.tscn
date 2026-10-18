@@ -5,6 +5,10 @@
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="3_component"]
 [ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="4_fhptr"]
 [ext_resource type="Texture2D" uid="uid://b7kxd2x2vnbsj" path="res://Assets/Icons/cooldown.png" id="5_d4ys2"]
+[ext_resource type="Texture2D" uid="uid://d4j77ghtg60x1" path="res://Assets/indicator.png" id="6_cd3yf"]
+[ext_resource type="Texture2D" uid="uid://bhsb6waav1hid" path="res://Assets/pin.png" id="7_4myhc"]
+
+[ext_resource type="PackedScene" path="res://Scenes/pin_effect_preview.tscn" id="8_preview"]
 
 [sub_resource type="Resource" id="Resource_pin"]
 resource_local_to_scene = true
@@ -82,6 +86,12 @@ component_resources = Array[ExtResource("3_component")]([SubResource("Resource_p
 
 [node name="Visual" type="Node2D" parent="." unique_id=495881888]
 
+[node name="Hole" type="Polygon2D" parent="Visual" unique_id=1874067841]
+position = Vector2(48.999996, -0.99999994)
+scale = Vector2(0.7, 0.7)
+color = Color(0.06, 0.07, 0.09, 1)
+polygon = PackedVector2Array(24, 0, 22.17, 9.18, 16.97, 16.97, 9.18, 22.17, 0, 24, -9.18, 22.17, -16.97, 16.97, -22.17, 9.18, -24, 0, -22.17, -9.18, -16.97, -16.97, -9.18, -22.17, 0, -24, 9.18, -22.17, 16.97, -16.97, 22.17, -9.18)
+
 [node name="BlinkIndicator" type="Polygon2D" parent="Visual" unique_id=1719412893]
 visible = false
 position = Vector2(49, -1)
@@ -89,14 +99,15 @@ scale = Vector2(0.53333336, 0.53333336)
 color = Color(1, 0.76, 0.35, 1)
 polygon = PackedVector2Array(30, 0, 27.72, 11.48, 21.21, 21.21, 11.48, 27.72, 0, 30, -11.48, 27.72, -21.21, 21.21, -27.72, 11.48, -30, 0, -27.72, -11.48, -21.21, -21.21, -11.48, -27.72, 0, -30, 11.48, -27.72, 21.21, -21.21, 27.72, -11.48)
 
-[node name="Rim" type="Polygon2D" parent="Visual" unique_id=1851225794]
-color = Color(0.78, 0.65, 0.4, 1)
-polygon = PackedVector2Array(24, 0, 22.17, 9.18, 16.97, 16.97, 9.18, 22.17, 0, 24, -9.18, 22.17, -16.97, 16.97, -22.17, 9.18, -24, 0, -22.17, -9.18, -16.97, -16.97, -9.18, -22.17, 0, -24, 9.18, -22.17, 16.97, -16.97, 22.17, -9.18)
+[node name="Indicator" type="Sprite2D" parent="Visual" unique_id=1956458255]
+position = Vector2(48.874996, 1.1324883e-06)
+scale = Vector2(0.13378909, 0.140625)
+texture = ExtResource("6_cd3yf")
 
-[node name="Hole" type="Polygon2D" parent="Visual" unique_id=1874067841]
-scale = Vector2(0.7, 0.7)
-color = Color(0.06, 0.07, 0.09, 1)
-polygon = PackedVector2Array(24, 0, 22.17, 9.18, 16.97, 16.97, 9.18, 22.17, 0, 24, -9.18, 22.17, -16.97, 16.97, -22.17, 9.18, -24, 0, -22.17, -9.18, -16.97, -16.97, -9.18, -22.17, 0, -24, 9.18, -22.17, 16.97, -16.97, 22.17, -9.18)
+[node name="Pin" type="Sprite2D" parent="Visual" unique_id=610329045]
+position = Vector2(3.8146973e-06, -1.9999985)
+scale = Vector2(0.1953125, 0.20312497)
+texture = ExtResource("7_4myhc")
 
 [node name="InputArea" type="Area2D" parent="." unique_id=1563065427]
 collision_mask = 0
@@ -131,17 +142,7 @@ position = Vector2(0, -1)
 scale = Vector2(0.1796875, 0.1796875)
 texture = ExtResource("5_d4ys2")
 
-[node name="EffectPreview" type="HFlowContainer" parent="." unique_id=611937510]
-visible = false
-z_index = 2
-offset_left = -72.0
-offset_top = 36.0
-offset_right = 72.0
-offset_bottom = 132.0
-mouse_filter = 2
-theme_override_constants/h_separation = 6
-theme_override_constants/v_separation = 4
-alignment = 1
+[node name="EffectPreview" parent="." unique_id=611937510 instance=ExtResource("8_preview")]
 
 [node name="CooldownSeconds" type="Label" parent="." unique_id=523265536]
 visible = false

@@ -15,11 +15,11 @@ offset_right = 167.0
 script = ExtResource("2_entity")
 component_resources = Array[ExtResource("4_component")]([SubResource("Resource_s6rak")])
 
-[node name="ResourceName" parent="Header" parent_id_path=PackedInt32Array(714559240) index="1" unique_id=1657740952]
+[node name="ResourceName" parent="Content/Header" parent_id_path=PackedInt32Array(2034459901, 714559240) index="0" unique_id=1657740952]
+theme_override_font_sizes/font_size = 20
+
+[node name="Amount" parent="Content/Header" parent_id_path=PackedInt32Array(2034459901, 714559240) index="1" unique_id=1817673509]
 theme_override_font_sizes/font_size = 12
 
-[node name="Amount" parent="Header" parent_id_path=PackedInt32Array(714559240) index="2" unique_id=1817673509]
-theme_override_font_sizes/font_size = 12
-
-[node name="ProgressBar" parent="." index="1" unique_id=1929055818]
+[node name="ProgressBar" parent="Content" parent_id_path=PackedInt32Array(2034459901) index="1" unique_id=1929055818]
 theme_override_font_sizes/font_size = 10

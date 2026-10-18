@@ -1,71 +1,96 @@
 [gd_scene format=3 uid="uid://57kkmumub3qr"]
 
 [ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="1_1xl1h"]
-[ext_resource type="Script" path="res://Scenes/location_resource.gd" id="2_colors"]
+[ext_resource type="Script" uid="uid://caanjae723h3x" path="res://Scenes/location_resource.gd" id="2_colors"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dm0af"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_background"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_resource_name"]
+content_margin_top = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ofmg"]
 resource_local_to_scene = true
 bg_color = Color(0.16, 0.14, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fill"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p0jb"]
 resource_local_to_scene = true
 bg_color = Color(0.35, 0.68, 0.3, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+expand_margin_left = -2.0
+expand_margin_top = -2.0
+expand_margin_right = -2.0
+expand_margin_bottom = -2.0
 
-[node name="LocationResource" type="VBoxContainer" unique_id=687029359]
+[node name="LocationResource" type="HBoxContainer" unique_id=687029359]
 offset_right = 100.0
 offset_bottom = 40.0
 mouse_filter = 2
-theme_override_constants/separation = 4
+theme_override_constants/separation = 8
 script = ExtResource("2_colors")
 
-[node name="Header" type="HBoxContainer" parent="." unique_id=714559240]
+[node name="Icon" type="TextureRect" parent="." unique_id=557587487]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 8
-
-[node name="Icon" type="TextureRect" parent="Header" unique_id=557587487]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
+size_flags_vertical = 4
 mouse_filter = 2
 texture = SubResource("CompressedTexture2D_dm0af")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ResourceName" type="Label" parent="Header" unique_id=1657740952]
+[node name="Content" type="VBoxContainer" parent="." unique_id=2034459901]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Header" type="HBoxContainer" parent="Content" unique_id=714559240]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="ResourceName" type="Label" parent="Content/Header" unique_id=1657740952]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 0.39)
 theme_override_colors/font_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 theme_override_fonts/font = ExtResource("1_1xl1h")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_resource_name")
 text = "Resource"
 
-[node name="Amount" type="Label" parent="Header" unique_id=1817673509]
+[node name="Amount" type="Label" parent="Content/Header" unique_id=1817673509]
 visible = false
 layout_mode = 2
 text = "0 / 100"
 
-[node name="Trend" type="Label" parent="Header" unique_id=212373561]
+[node name="Trend" type="Label" parent="Content/Header" unique_id=212373561]
 custom_minimum_size = Vector2(28, 0)
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1929055818]
-custom_minimum_size = Vector2(0, 10)
+[node name="ProgressBar" type="ProgressBar" parent="Content" unique_id=1929055818]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -10)
 mouse_filter = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_background")
-theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
+theme_override_styles/background = SubResource("StyleBoxFlat_6ofmg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2p0jb")
 step = 0.0
 show_percentage = false

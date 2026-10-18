@@ -19,7 +19,7 @@ func _ready() -> void:
 func _update_bar_colors() -> void:
 	if not is_node_ready():
 		return
-	var bar := get_node("ProgressBar") as ProgressBar
+	var bar := get_node("Content/ProgressBar") as ProgressBar
 	var fill := bar.get_theme_stylebox("fill").duplicate() as StyleBoxFlat
 	var background := bar.get_theme_stylebox("background").duplicate() as StyleBoxFlat
 	fill.bg_color = fill_color

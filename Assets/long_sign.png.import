@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ufq3e42kpa73"
-path="res://.godot/imported/chaos.svg-8a1382da6e35ee02d7dbe3a9096819ce.ctex"
+uid="uid://bnmnbpqwh2m7i"
+path="res://.godot/imported/long_sign.png-436b7278d3013322e5edae8b9bf8a513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/chaos.svg"
-dest_files=["res://.godot/imported/chaos.svg-8a1382da6e35ee02d7dbe3a9096819ce.ctex"]
+source_file="res://Assets/long_sign.png"
+dest_files=["res://.godot/imported/long_sign.png-436b7278d3013322e5edae8b9bf8a513.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

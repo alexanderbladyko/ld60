@@ -8,14 +8,15 @@
 script = ExtResource("3_option")
 message = "Just throw food at them!"
 resource_deltas = Dictionary[int, float]({
-0: 10.0
+0: -10.0,
+2: 15.0
 })
 
 [sub_resource type="Resource" id="castle_mage_tower"]
 script = ExtResource("3_option")
 message = "I just know the EXACT spell!"
 resource_deltas = Dictionary[int, float]({
-2: 5.0,
+2: 10.0,
 3: -15.0
 })
 
@@ -41,9 +42,10 @@ script = ExtResource("2_definition")
 event_id = &"castle_gate"
 message = "Goblins attack us! Send help!"
 cooldown_seconds = 10.0
+effect_duration = 20.0
 effect = Dictionary[int, float]({
-0: -1.0,
-2: -2.0
+0: -5.0,
+2: -10.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
 1: SubResource("castle_village"),
@@ -56,8 +58,8 @@ options = Dictionary[int, ExtResource("3_option")]({
 script = ExtResource("3_option")
 message = "Take him for a walk!"
 resource_deltas = Dictionary[int, float]({
-1: -4.0,
-3: 4.0
+1: -12.0,
+3: 20.0
 })
 cooldown_seconds = 10.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -66,7 +68,8 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "Please don't burn our houses!"
 resource_deltas = Dictionary[int, float]({
-0: -10.0
+0: 10.0,
+4: -30.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
@@ -74,7 +77,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "I'm sure I've seen a SLEEP spell somewhere!"
 resource_deltas = Dictionary[int, float]({
-3: -3.0,
+3: -15.0,
 4: 20.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -85,7 +88,7 @@ message = "Send our best dancers!!!"
 resource_deltas = Dictionary[int, float]({
 1: 10.0,
 2: -5.0,
-4: -2.0
+4: -20.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
@@ -95,10 +98,11 @@ event_id = &"dragon_bored"
 location = 3
 message = "I'm bored..."
 weight = 1.5
+effect_duration = 20.0
 effect = Dictionary[int, float]({
-2: -1.0
+2: -5.0
 })
-effect_period = 4.0
+effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_bu0y5"),
 1: SubResource("Resource_6a4tp"),
@@ -112,7 +116,7 @@ script = ExtResource("3_option")
 message = "Send our men!"
 resource_deltas = Dictionary[int, float]({
 0: 10.0,
-2: -2.0
+1: -20.0
 })
 cooldown_seconds = 10.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -156,7 +160,7 @@ message = "It's a FLOOD. Please save the fields!"
 cooldown_seconds = 50.0
 effect_duration = 20.0
 effect = Dictionary[int, float]({
-0: -1.0
+0: -5.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_bx8xc"),

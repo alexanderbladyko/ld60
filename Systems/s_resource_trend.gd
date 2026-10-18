@@ -23,7 +23,7 @@ func process(entities: Array[Entity], _components: Array, delta: float) -> void:
 	for view in entities:
 		var binding: C_ResourceView = view.get_component(C_ResourceView)
 		var trend: C_ResourceTrend = view.get_component(C_ResourceTrend)
-		var indicator := view.get_node("Header/Trend") as Label
+		var indicator := view.get_node("Content/Header/Trend") as Label
 		var source: C_Resource = stocks.get(binding.resource)
 		if source == null or source != trend.source or binding.resource != trend.last_resource:
 			trend.source = source
