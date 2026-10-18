@@ -3,4 +3,4 @@ extends RefCounted
 
 enum LocationType { CASTLE, VILLAGE, MAGE_TOWER, DRAGON_CAVE, CITY}
 
-enum ResourceType { FOOD, WOOD, WEAPONS, MANA, GOLD }
+enum ResourceType { FOOD, WOOD, WEAPONS, MANA, GOLD, CHAOS }

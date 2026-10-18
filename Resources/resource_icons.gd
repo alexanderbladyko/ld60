@@ -7,4 +7,5 @@ const TEXTURES: Array[Texture2D] = [
 	preload("res://Assets/Icons/weapon.png"),
 	preload("res://Assets/Icons/mana.png"),
 	preload("res://Assets/Icons/gold.png"),
+	preload("res://Assets/Icons/chaos.svg"),
 ]

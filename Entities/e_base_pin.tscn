@@ -84,6 +84,8 @@ component_resources = Array[ExtResource("3_component")]([SubResource("Resource_p
 
 [node name="BlinkIndicator" type="Polygon2D" parent="Visual" unique_id=1719412893]
 visible = false
+position = Vector2(49, -1)
+scale = Vector2(0.53333336, 0.53333336)
 color = Color(1, 0.76, 0.35, 1)
 polygon = PackedVector2Array(30, 0, 27.72, 11.48, 21.21, 21.21, 11.48, 27.72, 0, 30, -11.48, 27.72, -21.21, 21.21, -27.72, 11.48, -30, 0, -27.72, -11.48, -21.21, -21.21, -11.48, -27.72, 0, -30, 11.48, -27.72, 21.21, -21.21, 27.72, -11.48)
 
@@ -104,23 +106,16 @@ shape = SubResource("CircleShape2D_hit")
 
 [node name="CableAnchor" type="Marker2D" parent="." unique_id=1714041382]
 
-[node name="ChanceLabel" type="Label" parent="." unique_id=194805573]
-visible = false
-offset_left = -48.0
-offset_top = 34.0
-offset_right = 48.0
-offset_bottom = 62.0
-theme_override_colors/font_color = Color(1, 0.88, 0.6, 1)
-theme_override_font_sizes/font_size = 20
-text = "0%"
-horizontal_alignment = 1
-
 [node name="Name" type="Label" parent="." unique_id=1324464638]
-offset_left = 41.0
-offset_top = -10.0
-offset_right = 137.0
-offset_bottom = 18.0
+offset_left = -47.0
+offset_top = -56.0
+offset_right = 49.0
+offset_bottom = -28.0
 theme_override_colors/font_color = Color(1, 0.88, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("4_fhptr")
 theme_override_font_sizes/font_size = 20
 text = "Name"
@@ -147,3 +142,17 @@ mouse_filter = 2
 theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 4
 alignment = 1
+
+[node name="CooldownSeconds" type="Label" parent="." unique_id=523265536]
+visible = false
+z_index = 11
+offset_left = -48.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 0.94, 0.81, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.05, 0.07, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_fhptr")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1

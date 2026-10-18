@@ -8,7 +8,7 @@ func query() -> QueryBuilder:
 func process(entities: Array[Entity], _components: Array, _delta: float) -> void:
 	var stocks: Dictionary[Enums.ResourceType, C_Resource] = {}
 	for storage in _world.query.with_any([
-		C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource,
+		C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource, C_ChaosResource,
 	]).enabled().execute():
 		if not storage is ResourceStorage:
 			continue

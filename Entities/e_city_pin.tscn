@@ -12,5 +12,6 @@ location = 4
 [node name="Pin" unique_id=1323829197 instance=ExtResource("1_base")]
 component_resources = Array[ExtResource("2_component")]([SubResource("Resource_uqs6e")])
 
-[node name="Name" parent="." index="4" unique_id=1324464638]
+[node name="Name" parent="." index="3" unique_id=1324464638]
+theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
 text = "City"

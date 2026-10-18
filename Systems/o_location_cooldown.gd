@@ -19,7 +19,7 @@ func _on_location_changed(event: Variant, entity: Entity, _payload: Variant) -> 
 	if indicator != null:
 		indicator.visible = remaining > 0.0
 		var counter := indicator.get_node("Seconds") as Label
-		counter.text = str(ceili(remaining)) if remaining > 0.0 else ""
+		counter.text = "%d s" % ceili(remaining) if remaining > 0.0 else ""
 	for pin in _world.query.with_all([C_Pin]).execute():
 		_refresh_pin(pin, entity if entity != excluded else null, excluded)
 
@@ -30,20 +30,23 @@ func _on_pin_added(_event: Variant, pin: Entity, _payload: Variant) -> void:
 
 func _refresh_pin(pin: Entity, changed: Entity = null, excluded: Entity = null) -> void:
 	var binding: C_Pin = pin.get_component(C_Pin)
-	var blocked := _matches_cooldown(changed, binding.location)
+	var remaining := _cooldown_remaining(changed, binding.location)
 	for location in _world.query.with_all([C_Location, C_LocationCooldown]).enabled().execute():
-		if location != excluded and _matches_cooldown(location, binding.location):
-			blocked = true
-			break
+		if location != excluded:
+			remaining = maxf(remaining, _cooldown_remaining(location, binding.location))
 	var indicator := pin.get_node_or_null("CooldownIndicator") as Sprite2D
 	if indicator != null:
-		indicator.visible = blocked
+		indicator.visible = remaining > 0.0
+	var counter := pin.get_node_or_null("CooldownSeconds") as Label
+	if counter != null:
+		counter.visible = remaining > 0.0
+		counter.text = "%d s" % ceili(remaining) if remaining > 0.0 else ""
 
 
-func _matches_cooldown(entity: Entity, location_type: Enums.LocationType) -> bool:
+func _cooldown_remaining(entity: Entity, location_type: Enums.LocationType) -> float:
 	if (not is_instance_valid(entity) or not entity.enabled or not entity.has_component(C_Location)
 		or not entity.has_component(C_LocationCooldown)):
-		return false
+		return 0.0
 	var location: C_Location = entity.get_component(C_Location)
 	var cooldown: C_LocationCooldown = entity.get_component(C_LocationCooldown)
-	return location.location == location_type and cooldown.remaining > 0.0
+	return maxf(cooldown.remaining, 0.0) if location.location == location_type else 0.0

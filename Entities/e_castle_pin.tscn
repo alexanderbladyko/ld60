@@ -11,5 +11,9 @@ script = ExtResource("3_bdol8")
 [node name="Pin" unique_id=861097526 instance=ExtResource("1_5yltl")]
 component_resources = Array[ExtResource("2_ynp2p")]([SubResource("Resource_5yltl")])
 
-[node name="Name" parent="." index="4" unique_id=1324464638]
+[node name="BlinkIndicator" parent="Visual" parent_id_path=PackedInt32Array(495881888) index="0" unique_id=1719412893]
+color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+
+[node name="Name" parent="." index="3" unique_id=1324464638]
+theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 text = "Castle"

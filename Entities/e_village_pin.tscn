@@ -12,5 +12,9 @@ location = 1
 [node name="Pin" unique_id=1727321669 instance=ExtResource("1_base")]
 component_resources = Array[ExtResource("2_component")]([SubResource("Resource_7ovw4")])
 
-[node name="Name" parent="." index="4" unique_id=1324464638]
+[node name="BlinkIndicator" parent="Visual" parent_id_path=PackedInt32Array(495881888) index="0" unique_id=1719412893]
+color = Color(0.91764706, 0.7019608, 0.03137255, 1)
+
+[node name="Name" parent="." index="3" unique_id=1324464638]
+theme_override_colors/font_color = Color(0.91764706, 0.7019608, 0.03137255, 1)
 text = "Village"

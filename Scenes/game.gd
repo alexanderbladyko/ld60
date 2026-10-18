@@ -8,6 +8,7 @@ extends Node2D
 
 func _ready() -> void:
 	ECS.world = $World
+	$Systems/process/ChaosSystem.chaos_limit_reached.connect(_on_chaos_limit_reached)
 	get_viewport().size_changed.connect(_center_game)
 	_center_game()
 
@@ -26,3 +27,13 @@ func _process(delta: float) -> void:
 	ECS.process(delta, "events")
 	ECS.process(delta, "process")
 	ECS.process(delta, "cleanup")
+
+
+func _on_chaos_limit_reached() -> void:
+	set_process(false)
+	_open_game_over.call_deferred()
+
+
+func _open_game_over() -> void:
+	preload("res://Scenes/menu.gd").show_game_over = true
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

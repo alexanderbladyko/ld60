@@ -10,6 +10,10 @@ var random := RandomNumberGenerator.new()
 var time_until_next_event: float = 0.0
 
 
+func deps() -> Dictionary[int, Array]:
+	return {Runs.After: [EventResolutionSystem], Runs.Before: []}
+
+
 func setup() -> void:
 	random.randomize()
 	time_until_next_event = start_interval
@@ -41,6 +45,12 @@ func _choose_event() -> LocationEventDefinition:
 		var lifetime: C_Lifetime = entity.get_component(C_Lifetime)
 		if event.definition != null and not event.resolved and lifetime.remaining > 0.0:
 			occupied_locations[event.definition.location] = true
+
+	for entity in _world.query.with_all([C_Location, C_LocationCooldown]).enabled().execute():
+		var cooldown: C_LocationCooldown = entity.get_component(C_LocationCooldown)
+		if cooldown.remaining > 0.0:
+			var location: C_Location = entity.get_component(C_Location)
+			occupied_locations[location.location] = true
 
 	var candidates: Array[LocationEventDefinition] = []
 	var total_weight := 0.0

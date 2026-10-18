@@ -12,5 +12,9 @@ location = 3
 [node name="Pin" unique_id=1525014296 instance=ExtResource("1_base")]
 component_resources = Array[ExtResource("2_component")]([SubResource("Resource_wtokj")])
 
-[node name="Name" parent="." index="4" unique_id=1324464638]
+[node name="BlinkIndicator" parent="Visual" parent_id_path=PackedInt32Array(495881888) index="0" unique_id=1719412893]
+color = Color(0.39607844, 0.6392157, 0.050980393, 1)
+
+[node name="Name" parent="." index="3" unique_id=1324464638]
+theme_override_colors/font_color = Color(0.39607844, 0.6392157, 0.050980393, 1)
 text = "Dragon Cave"

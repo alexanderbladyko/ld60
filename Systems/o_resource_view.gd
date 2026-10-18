@@ -2,7 +2,7 @@ class_name ResourceViewObserver
 extends Observer
 
 var _resource_types: Array = [
-	C_Resource, C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource,
+	C_Resource, C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource, C_ChaosResource,
 ]
 
 func sub_observers() -> Array[Array]:

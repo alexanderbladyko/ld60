@@ -5,10 +5,6 @@ extends System
 @export_range(0.1, 10.0) var sample_window: float = 2.0
 
 
-func deps() -> Dictionary[int, Array]:
-	return {Runs.After: [ResourceChangeSystem], Runs.Before: []}
-
-
 func query() -> QueryBuilder:
 	return q.with_all([C_ResourceView, C_ResourceTrend])
 
@@ -16,7 +12,7 @@ func query() -> QueryBuilder:
 func process(entities: Array[Entity], _components: Array, delta: float) -> void:
 	var stocks: Dictionary[Enums.ResourceType, C_Resource] = {}
 	for storage in _world.query.with_any([
-		C_Resource, C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource,
+		C_Resource, C_FoodResource, C_WoodResource, C_WeaponsResource, C_ManaResource, C_GoldResource, C_ChaosResource,
 	]).enabled().execute():
 		if not storage is ResourceStorage:
 			continue

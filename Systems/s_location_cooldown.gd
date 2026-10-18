@@ -2,10 +2,6 @@ class_name LocationCooldownSystem
 extends System
 
 
-func deps() -> Dictionary[int, Array]:
-	return {Runs.Before: [PinSelectionSystem], Runs.After: []}
-
-
 func query() -> QueryBuilder:
 	return q.with_all([C_Location, C_LocationCooldown])
 
