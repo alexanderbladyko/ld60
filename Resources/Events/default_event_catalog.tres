@@ -8,7 +8,7 @@
 script = ExtResource("3_option")
 message = "Weaponize yesterday's bread!"
 resource_deltas = Dictionary[int, float]({
-0: -10.0,
+0: -1.0,
 2: 15.0
 })
 
@@ -24,7 +24,7 @@ resource_deltas = Dictionary[int, float]({
 script = ExtResource("3_option")
 message = "Roast first, identify goblins later!"
 resource_deltas = Dictionary[int, float]({
-1: -20.0,
+1: -2.0,
 4: 10.0
 })
 
@@ -42,10 +42,10 @@ script = ExtResource("2_definition")
 event_id = &"castle_gate"
 message = "Goblins attack us! Send help!"
 cooldown_seconds = 10.0
-effect_duration = 20.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -5.0,
-2: -10.0
+0: -3.5,
+2: -7.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
 1: SubResource("castle_village"),
@@ -69,7 +69,7 @@ script = ExtResource("3_option")
 message = "We hired a very expensive clown"
 resource_deltas = Dictionary[int, float]({
 0: 10.0,
-4: -30.0
+4: -3.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
@@ -88,7 +88,7 @@ message = "Our dancers charge danger money"
 resource_deltas = Dictionary[int, float]({
 1: 10.0,
 2: -5.0,
-4: -20.0
+4: -2.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
@@ -98,9 +98,9 @@ event_id = &"dragon_bored"
 location = 3
 message = "I'm bored..."
 weight = 1.5
-effect_duration = 20.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-2: -5.0
+2: -3.5
 })
 effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -116,7 +116,7 @@ script = ExtResource("3_option")
 message = "Build an ark. No unicorns!"
 resource_deltas = Dictionary[int, float]({
 0: 10.0,
-1: -20.0
+1: -2.0
 })
 cooldown_seconds = 10.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -125,8 +125,8 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "Steve drank the water spell!"
 resource_deltas = Dictionary[int, float]({
-0: -20.0,
-3: -10.0
+0: -2.0,
+3: -1.0
 })
 cooldown_seconds = 5.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -135,8 +135,8 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "Steam is basically dry water"
 resource_deltas = Dictionary[int, float]({
-0: -10.0,
-1: -10.0,
+0: -1.0,
+1: -1.0,
 2: 5.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -146,7 +146,7 @@ script = ExtResource("3_option")
 message = "Introducing: the royal toilet!"
 resource_deltas = Dictionary[int, float]({
 0: 15.0,
-1: -20.0,
+1: -2.0,
 2: 10.0
 })
 cooldown_seconds = 15.0
@@ -158,9 +158,9 @@ event_id = &"village_flood"
 location = 1
 message = "It's a FLOOD. Please save the fields!"
 cooldown_seconds = 50.0
-effect_duration = 20.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -5.0
+0: -3.5
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_bx8xc"),
@@ -175,7 +175,7 @@ script = ExtResource("3_option")
 message = "Tax every drunken hiccup!"
 resource_deltas = Dictionary[int, float]({
 0: -5.0,
-2: -10.0,
+2: -1.0,
 4: 20.0
 })
 cooldown_seconds = 5.0
@@ -194,7 +194,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "A toast! Oops, literal toast!"
 resource_deltas = Dictionary[int, float]({
-1: -20.0,
+1: -2.0,
 3: 30.0
 })
 cooldown_seconds = 30.0
@@ -216,9 +216,9 @@ event_id = &"mage_party"
 location = 2
 message = "All the water is wine now! Let's celebrate!"
 cooldown_seconds = 10.0
-effect_duration = 20.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -2.0,
+0: -1.4,
 3: 4.0
 })
 options = Dictionary[int, ExtResource("3_option")]({
@@ -264,8 +264,8 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "I charge extra for class warfare"
 resource_deltas = Dictionary[int, float]({
-1: -10.0,
-3: -10.0,
+1: -1.0,
+3: -1.0,
 4: 10.0
 })
 cooldown_seconds = 25.0
@@ -276,9 +276,9 @@ script = ExtResource("2_definition")
 location = 4
 message = "Poor people are too wealthy, rich people are unhappy!"
 cooldown_seconds = 50.0
-effect_duration = 20.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -3.0
+0: -2.1
 })
 effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -313,7 +313,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "I thought I was the river monster!"
 resource_deltas = Dictionary[int, float]({
-0: -10.0,
+0: -1.0,
 3: 5.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -322,7 +322,7 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "Lunch delivery, scales included"
 resource_deltas = Dictionary[int, float]({
-0: -10.0,
+0: -1.0,
 1: 10.0,
 4: -5.0
 })
@@ -333,7 +333,7 @@ script = ExtResource("2_definition")
 event_id = &"castle_croco"
 message = "Someone has to feed that croco in the river!"
 cooldown_seconds = 10.0
-effect_duration = 20.0
+effect_duration = 30.0
 effect_period = 2.0
 options = Dictionary[int, ExtResource("3_option")]({
 1: SubResource("Resource_d0ny1"),
@@ -382,12 +382,13 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_7lcyc"]
 script = ExtResource("2_definition")
+effect_duration = 30.0
 event_id = &"village_olympics"
 location = 1
 message = "Annual potato games are officially on!!!"
 cooldown_seconds = 20.0
 effect = Dictionary[int, float]({
-0: -1.2
+0: -0.84
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_uiso3"),
@@ -403,7 +404,7 @@ message = "Send a knight! A very small knight!"
 resource_deltas = Dictionary[int, float]({
 0: 4.0,
 1: 30.0,
-2: -10.0
+2: -1.0
 })
 cooldown_seconds = 30.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -423,9 +424,9 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 script = ExtResource("3_option")
 message = "I can cauterize the whole Steve!"
 resource_deltas = Dictionary[int, float]({
-1: -10.0,
+1: -1.0,
 3: 5.0,
-4: -10.0
+4: -1.0
 })
 cooldown_seconds = 3.0
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
@@ -443,11 +444,12 @@ metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
 [sub_resource type="Resource" id="Resource_etabg"]
 script = ExtResource("2_definition")
+effect_duration = 30.0
 event_id = &"mage_steve"
 location = 2
 message = "Steve has a hangnail, send a doctor"
 effect = Dictionary[int, float]({
-3: -4.0
+3: -2.8
 })
 options = Dictionary[int, ExtResource("3_option")]({
 0: SubResource("Resource_ohexe"),
@@ -497,10 +499,10 @@ cooldown_seconds = 10.0
 script = ExtResource("2_definition")
 event_id = &"castle_geese"
 message = "Geese stole the royal crowns!"
-effect_duration = 24.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-2: -6.0,
-4: -6.0
+2: -4.2,
+4: -4.2
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -551,10 +553,10 @@ cooldown_seconds = 15.0
 script = ExtResource("2_definition")
 event_id = &"castle_soup"
 message = "The knights are stuck in soup!"
-effect_duration = 22.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -12.0,
-2: -6.0
+0: -8.4,
+2: -4.2
 })
 effect_period = 3.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -604,10 +606,10 @@ resource_deltas = Dictionary[int, float]({
 script = ExtResource("2_definition")
 event_id = &"castle_ghost"
 message = "A ghost demands unpaid wages!"
-effect_duration = 28.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-3: -6.0,
-4: -12.0
+3: -4.2,
+4: -8.4
 })
 effect_period = 5.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -657,10 +659,10 @@ cooldown_seconds = 25.0
 script = ExtResource("2_definition")
 event_id = &"castle_jester"
 message = "The jester declared himself king!"
-effect_duration = 26.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-2: -6.0,
-4: -12.0
+2: -4.2,
+4: -8.4
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -710,10 +712,10 @@ script = ExtResource("2_definition")
 event_id = &"village_giant_potato"
 location = 1
 message = "A giant potato is blocking the well!"
-effect_duration = 25.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -12.0,
-1: -6.0
+0: -8.4,
+1: -4.2
 })
 effect_period = 5.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -764,10 +766,10 @@ script = ExtResource("2_definition")
 event_id = &"village_chicken_union"
 location = 1
 message = "The chickens demand weekends!"
-effect_duration = 23.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -6.0,
-4: -6.0
+0: -4.2,
+4: -4.2
 })
 effect_period = 3.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -817,10 +819,10 @@ script = ExtResource("2_definition")
 event_id = &"village_walking_cottages"
 location = 1
 message = "Our cottages have grown legs!"
-effect_duration = 27.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-1: -12.0,
-4: -6.0
+1: -8.4,
+4: -4.2
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -874,7 +876,7 @@ message = "A turnip has been elected mayor!"
 effect_duration = 30.0
 effect = Dictionary[int, float]({
 0: 6.0,
-4: -12.0
+4: -8.4
 })
 effect_period = 6.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -925,10 +927,10 @@ script = ExtResource("2_definition")
 event_id = &"mage_frog_teapot"
 location = 2
 message = "The teapot keeps summoning frogs!"
-effect_duration = 21.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
 0: 6.0,
-3: -12.0
+3: -8.4
 })
 effect_period = 3.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -979,10 +981,10 @@ script = ExtResource("2_definition")
 event_id = &"mage_biting_books"
 location = 2
 message = "The books are biting again!"
-effect_duration = 24.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-1: -12.0,
-3: -6.0
+1: -8.4,
+3: -4.2
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1031,10 +1033,10 @@ script = ExtResource("2_definition")
 event_id = &"mage_moon_rental"
 location = 2
 message = "Steve accidentally rented the moon!"
-effect_duration = 29.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
 3: 6.0,
-4: -18.0
+4: -12.6
 })
 effect_period = 5.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1085,10 +1087,10 @@ script = ExtResource("2_definition")
 event_id = &"mage_bad_mirrors"
 location = 2
 message = "The mirrors are giving bad advice!"
-effect_duration = 26.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-2: -6.0,
-3: -12.0
+2: -4.2,
+3: -8.4
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1139,10 +1141,10 @@ script = ExtResource("2_definition")
 event_id = &"dragon_hiccups"
 location = 3
 message = "My hiccups keep melting the spoons!"
-effect_duration = 22.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-1: -6.0,
-2: -12.0
+1: -4.2,
+2: -8.4
 })
 effect_period = 3.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1192,10 +1194,10 @@ script = ExtResource("2_definition")
 event_id = &"dragon_sneeze"
 location = 3
 message = "I sneezed. The forest is toast!"
-effect_duration = 25.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -6.0,
-1: -12.0
+0: -4.2,
+1: -8.4
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1226,7 +1228,7 @@ cooldown_seconds = 25.0
 script = ExtResource("3_option")
 message = "Reverse the duckification!"
 resource_deltas = Dictionary[int, float]({
-3: -30.0,
+3: -3.0,
 4: 36.0
 })
 cooldown_seconds = 10.0
@@ -1244,10 +1246,10 @@ script = ExtResource("2_definition")
 event_id = &"dragon_duck_hoard"
 location = 3
 message = "My treasure hatched into ducklings!"
-effect_duration = 28.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -6.0,
-4: -12.0
+0: -4.2,
+4: -8.4
 })
 effect_period = 5.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1300,7 +1302,7 @@ location = 3
 message = "I opened a bakery. Everything is lava!"
 effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -12.0,
+0: -8.4,
 4: 6.0
 })
 effect_period = 6.0
@@ -1352,10 +1354,10 @@ script = ExtResource("2_definition")
 event_id = &"city_rat_guild"
 location = 4
 message = "The rats formed a merchant guild!"
-effect_duration = 23.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -6.0,
-4: -12.0
+0: -4.2,
+4: -8.4
 })
 effect_period = 3.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1405,10 +1407,10 @@ script = ExtResource("2_definition")
 event_id = &"city_runaway_coins"
 location = 4
 message = "The coins keep rolling uphill!"
-effect_duration = 27.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-1: -6.0,
-4: -12.0
+1: -4.2,
+4: -8.4
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1459,10 +1461,10 @@ script = ExtResource("2_definition")
 event_id = &"city_statue_salary"
 location = 4
 message = "The mayor's statue wants a salary!"
-effect_duration = 24.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-3: -6.0,
-4: -18.0
+3: -4.2,
+4: -12.6
 })
 effect_period = 4.0
 options = Dictionary[int, ExtResource("3_option")]({
@@ -1513,10 +1515,10 @@ script = ExtResource("2_definition")
 event_id = &"city_loud_mimes"
 location = 4
 message = "The mime festival is getting loud!"
-effect_duration = 29.0
+effect_duration = 30.0
 effect = Dictionary[int, float]({
-0: -6.0,
-1: -12.0
+0: -4.2,
+1: -8.4
 })
 effect_period = 5.0
 options = Dictionary[int, ExtResource("3_option")]({
