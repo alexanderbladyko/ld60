@@ -52,7 +52,7 @@ func process(entities: Array[Entity], _components: Array, delta: float) -> void:
 		if is_zero_approx(rate):
 			indicator.text = ""
 			continue
-		var arrow := ">" if rate > 0.0 else "<"
+		var arrow := "▶" if rate > 0.0 else "◀"
 		indicator.text = arrow + arrow if absf(rate) > double_arrow_threshold else arrow
 		indicator.add_theme_color_override("font_color",
 			Color(0.3, 0.9, 0.4) if rate > 0.0 else Color(1.0, 0.3, 0.3))

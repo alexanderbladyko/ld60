@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://57kkmumub3qr"]
 
+[ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="1_1xl1h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dm0af"]
+
 [node name="LocationResource" type="VBoxContainer" unique_id=687029359]
 offset_right = 100.0
 offset_bottom = 40.0
@@ -11,12 +15,24 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 8
 
+[node name="Icon" type="TextureRect" parent="Header" unique_id=557587487]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_dm0af")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="ResourceName" type="Label" parent="Header" unique_id=1657740952]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("1_1xl1h")
+theme_override_font_sizes/font_size = 32
 text = "Resource"
 
 [node name="Amount" type="Label" parent="Header" unique_id=1817673509]
+visible = false
 layout_mode = 2
 text = "0 / 100"
 

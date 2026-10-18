@@ -5,22 +5,21 @@
 [ext_resource type="Script" uid="uid://btbkogygjvnt6" path="res://Components/c_resource_view.gd" id="3_binding"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="4_component"]
 
-[sub_resource type="Resource" id="Resource_e85n4"]
+[sub_resource type="Resource" id="Resource_s6rak"]
 resource_local_to_scene = true
 script = ExtResource("3_binding")
 
 [node name="ResourceView" unique_id=1996675306 instance=ExtResource("1_visual")]
 custom_minimum_size = Vector2(100, 0)
-offset_right = 100.0
+offset_right = 167.0
 script = ExtResource("2_entity")
-component_resources = Array[ExtResource("4_component")]([SubResource("Resource_e85n4")])
+component_resources = Array[ExtResource("4_component")]([SubResource("Resource_s6rak")])
 
-[node name="ResourceName" parent="Header" index="0"]
-theme_override_font_sizes/font_size = 10
+[node name="ResourceName" parent="Header" parent_id_path=PackedInt32Array(714559240) index="1" unique_id=1657740952]
+theme_override_font_sizes/font_size = 12
 
-[node name="Amount" parent="Header" index="1"]
-theme_override_font_sizes/font_size = 10
+[node name="Amount" parent="Header" parent_id_path=PackedInt32Array(714559240) index="2" unique_id=1817673509]
+theme_override_font_sizes/font_size = 12
 
-[node name="ProgressBar" parent="." index="1"]
-custom_minimum_size = Vector2(0, 10)
+[node name="ProgressBar" parent="." index="1" unique_id=1929055818]
 theme_override_font_sizes/font_size = 10

@@ -3,14 +3,30 @@
 [ext_resource type="PackedScene" uid="uid://ci47mjumr8sqp" path="res://Entities/e_base_location.tscn" id="1_base"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_component"]
 [ext_resource type="Script" uid="uid://dryxapum6y7pr" path="res://Components/c_location.gd" id="3_location"]
+[ext_resource type="Texture2D" uid="uid://dbvytjr2hcak8" path="res://Assets/Locations/dragon.png" id="4_ybgpk"]
 
-[sub_resource type="Resource" id="Resource_35kub"]
+[sub_resource type="Resource" id="Resource_ybgpk"]
 resource_local_to_scene = true
 script = ExtResource("3_location")
 location = 3
 
 [node name="DragonCave" unique_id=1033662457 instance=ExtResource("1_base")]
-component_resources = Array[ExtResource("2_component")]([SubResource("Resource_35kub")])
+component_resources = Array[ExtResource("2_component")]([SubResource("Resource_ybgpk")])
 
-[node name="Name" parent="." index="1" unique_id=2005404104]
+[node name="TextureRect" parent="." index="0" unique_id=843454972]
+offset_left = -112.0
+offset_top = -100.0
+offset_right = 370.0
+offset_bottom = 263.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ybgpk")
+
+[node name="Sign" parent="." index="1" unique_id=922540351]
+position = Vector2(2.603981, 97.75)
+
+[node name="Name" parent="." index="2" unique_id=2005404104]
+offset_left = -59.0
+offset_top = 79.0
+offset_right = 65.0
+offset_bottom = 117.0
 text = "Dragon's Cave"

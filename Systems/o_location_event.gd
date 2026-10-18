@@ -46,8 +46,8 @@ func _refresh_view(current: Entity) -> void:
 	if view == null:
 		return
 	var content := view.get_node("Margin/Content")
-	var title := content.get_node("LocationName") as Label
-	var message := content.get_node("Message") as Label
+	var title := content.get_node("Hbox/LocationName") as Label
+	var message := content.get_node("Hbox/Message") as Label
 	var time_left := content.get_node("TimeLeft") as Label
 	var bar := content.get_node("LifetimeBar") as ProgressBar
 	if current == null:

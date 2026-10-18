@@ -70,6 +70,15 @@ resource_deltas = Dictionary[int, float]({
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 
+[sub_resource type="Resource" id="Resource_f3c8l"]
+script = ExtResource("3_option")
+message = "I'm sure I've seen a SLEEP spell somewhere!"
+resource_deltas = Dictionary[int, float]({
+3: -3.0,
+4: 20.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
 [sub_resource type="Resource" id="Resource_631el"]
 script = ExtResource("3_option")
 message = "Send our best dancers!!!"
@@ -77,15 +86,6 @@ resource_deltas = Dictionary[int, float]({
 1: 10.0,
 2: -5.0,
 4: -2.0
-})
-metadata/_custom_type_script = "uid://13t14ftl7e0y"
-
-[sub_resource type="Resource" id="Resource_f3c8l"]
-script = ExtResource("3_option")
-message = "I'm sure I've seen a SLEEP spell somewhere!"
-resource_deltas = Dictionary[int, float]({
-3: -3.0,
-4: 20.0
 })
 metadata/_custom_type_script = "uid://13t14ftl7e0y"
 

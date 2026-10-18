@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi3shwanl2t7e"
-path="res://.godot/imported/cooldown.svg-70222f6a6625a3370762d22d519b6d9c.ctex"
+uid="uid://dgo31u7so0njt"
+path="res://.godot/imported/map.png-75282a52aa2b0d3f60b00ce42d297342.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/cooldown.svg"
-dest_files=["res://.godot/imported/cooldown.svg-70222f6a6625a3370762d22d519b6d9c.ctex"]
+source_file="res://art/map.png"
+dest_files=["res://.godot/imported/map.png-75282a52aa2b0d3f60b00ce42d297342.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

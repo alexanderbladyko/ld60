@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://da5johfl8lwmu" path="res://Scenes/game.gd" id="1_game"]
 [ext_resource type="Script" uid="uid://cdu5tlyk72uu4" path="res://addons/gecs/ecs/world.gd" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://0qhkgq0njr8c" path="res://Assets/map.png" id="2_631el"]
 [ext_resource type="Script" uid="uid://b3vi2ingux88g" path="res://addons/gecs/lib/system_group.gd" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://d28bv3100oyve" path="res://Entities/e_dragon_cave_location.tscn" id="3_nnt18"]
 [ext_resource type="PackedScene" uid="uid://c0g3wmy8bbde7" path="res://Entities/e_castle_pin.tscn" id="3_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://dxnfn3m0koxwr" path="res://Assets/deck.png" id="3_vs120"]
 [ext_resource type="Script" uid="uid://bwiqdphygjwr5" path="res://Systems/s_pin_selection.gd" id="4_3dryh"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="4_v158k"]
 [ext_resource type="Script" uid="uid://dryxapum6y7pr" path="res://Components/c_location.gd" id="5_ewbju"]
@@ -36,104 +38,105 @@
 [ext_resource type="Script" uid="uid://dp1p5y0neojsc" path="res://Systems/s_resource_trend.gd" id="38_resource_trend"]
 [ext_resource type="Script" uid="uid://cxwioojj3vmj2" path="res://Systems/s_location_cooldown.gd" id="39_location_cooldown"]
 [ext_resource type="Script" uid="uid://ce8o5t374340x" path="res://Systems/o_location_cooldown.gd" id="40_cooldown_observer"]
+[ext_resource type="Script" uid="uid://r70rao8ks2se" path="res://Systems/s_pin_effect_preview.gd" id="41_pin_effect_preview"]
 [ext_resource type="Script" uid="uid://batmyw1junnej" path="res://Components/c_food_resource.gd" id="stock_food"]
 [ext_resource type="Script" uid="uid://b4ernqwnkn3om" path="res://Components/c_gold_resource.gd" id="stock_gold"]
 [ext_resource type="Script" uid="uid://bhyh2oe35eflo" path="res://Components/c_mana_resource.gd" id="stock_mana"]
 [ext_resource type="Script" uid="uid://dcik8m7bkqdy8" path="res://Components/c_weapons_resource.gd" id="stock_weapons"]
 [ext_resource type="Script" uid="uid://dqrpmj4o7jsn0" path="res://Components/c_wood_resource.gd" id="stock_wood"]
 
-[sub_resource type="Resource" id="Resource_f3c8l"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-
-[sub_resource type="Resource" id="Resource_bu0y5"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 4
-
-[sub_resource type="Resource" id="Resource_6a4tp"]
-resource_local_to_scene = true
-script = ExtResource("5_h4fw4")
-location = 3
-
 [sub_resource type="Resource" id="Resource_631el"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 3
+script = ExtResource("5_h4fw4")
 
 [sub_resource type="Resource" id="Resource_vs120"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 2
+location = 4
 
 [sub_resource type="Resource" id="Resource_v2cs8"]
 resource_local_to_scene = true
 script = ExtResource("5_h4fw4")
-location = 1
+location = 3
 
 [sub_resource type="Resource" id="Resource_32sfa"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
+location = 3
 
 [sub_resource type="Resource" id="Resource_titue"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 4
+script = ExtResource("5_h4fw4")
+location = 2
 
 [sub_resource type="Resource" id="Resource_tt7mg"]
 resource_local_to_scene = true
-script = ExtResource("5_ewbju")
-location = 2
+script = ExtResource("5_h4fw4")
+location = 1
 
 [sub_resource type="Resource" id="Resource_htg8p"]
 resource_local_to_scene = true
 script = ExtResource("5_ewbju")
-location = 1
 
 [sub_resource type="Resource" id="Resource_jcvim"]
 resource_local_to_scene = true
-script = ExtResource("stock_food")
+script = ExtResource("5_ewbju")
+location = 4
 
 [sub_resource type="Resource" id="Resource_fnkle"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 2
+
+[sub_resource type="Resource" id="Resource_wr3wg"]
+resource_local_to_scene = true
+script = ExtResource("5_ewbju")
+location = 1
+
+[sub_resource type="Resource" id="Resource_6xvgv"]
+resource_local_to_scene = true
+script = ExtResource("stock_food")
+
+[sub_resource type="Resource" id="Resource_8lpvs"]
 resource_local_to_scene = true
 script = ExtResource("stock_wood")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_wr3wg"]
+[sub_resource type="Resource" id="Resource_x6jpx"]
 resource_local_to_scene = true
 script = ExtResource("stock_weapons")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_6xvgv"]
+[sub_resource type="Resource" id="Resource_sjh24"]
 resource_local_to_scene = true
 script = ExtResource("stock_mana")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_8lpvs"]
+[sub_resource type="Resource" id="Resource_k5jl5"]
 resource_local_to_scene = true
 script = ExtResource("stock_gold")
 resource = 4
 
-[sub_resource type="Resource" id="Resource_x6jpx"]
+[sub_resource type="Resource" id="Resource_nqk4g"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 
-[sub_resource type="Resource" id="Resource_sjh24"]
+[sub_resource type="Resource" id="Resource_fh6x0"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 1
 
-[sub_resource type="Resource" id="Resource_k5jl5"]
+[sub_resource type="Resource" id="Resource_j0obb"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 2
 
-[sub_resource type="Resource" id="Resource_nqk4g"]
+[sub_resource type="Resource" id="Resource_nfavm"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 3
 
-[sub_resource type="Resource" id="Resource_fh6x0"]
+[sub_resource type="Resource" id="Resource_jcn4n"]
 resource_local_to_scene = true
 script = ExtResource("19_resource_binding")
 resource = 4
@@ -142,7 +145,17 @@ resource = 4
 script = ExtResource("1_game")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=228923553]
-position = Vector2(580, 320)
+position = Vector2(490.83105, 321.39838)
+
+[node name="Map" type="Sprite2D" parent="." unique_id=344035879]
+position = Vector2(493.83105, 449.39838)
+scale = Vector2(0.5230967, 0.6110272)
+texture = ExtResource("2_631el")
+
+[node name="Deck" type="Sprite2D" parent="." unique_id=1216550421]
+position = Vector2(558.8669, 708.8828)
+scale = Vector2(0.54211545, 0.54211533)
+texture = ExtResource("3_vs120")
 
 [node name="World" type="Node" parent="." unique_id=2128673152]
 script = ExtResource("1_qxrlw")
@@ -153,81 +166,88 @@ metadata/_custom_type_script = "uid://cdu5tlyk72uu4"
 [node name="Entities" type="Node2D" parent="." unique_id=1964670033]
 
 [node name="CastlePin" parent="Entities" unique_id=861097526 instance=ExtResource("3_o5yvi")]
-position = Vector2(872, 552)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_f3c8l")])
-
-[node name="CityPin" parent="Entities" unique_id=524521090 instance=ExtResource("6_rku1e")]
-position = Vector2(137, 541)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_bu0y5")])
-
-[node name="DragonCavePin" parent="Entities" unique_id=1908340287 instance=ExtResource("7_rfjv2")]
-position = Vector2(514, 543)
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6a4tp")])
-
-[node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
-position = Vector2(970, 95)
+position = Vector2(58, 575)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_631el")])
 
-[node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
-position = Vector2(689, 548)
+[node name="CityPin" parent="Entities" unique_id=524521090 instance=ExtResource("6_rku1e")]
+position = Vector2(757, 581)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_vs120")])
 
-[node name="VillagePin" parent="Entities" unique_id=2026254875 instance=ExtResource("9_nb51f")]
-position = Vector2(332, 539)
+[node name="DragonCavePin" parent="Entities" unique_id=1908340287 instance=ExtResource("7_rfjv2")]
+position = Vector2(1016, 584)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_v2cs8")])
 
-[node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
-position = Vector2(141, 284)
+[node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
+position = Vector2(1050.831, 372.39838)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_32sfa")])
 
-[node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
-position = Vector2(862, 295)
+[node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
+position = Vector2(275, 579)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_titue")])
 
-[node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
-position = Vector2(362, 102)
+[node name="VillagePin" parent="Entities" unique_id=2026254875 instance=ExtResource("9_nb51f")]
+position = Vector2(514, 583)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_tt7mg")])
 
-[node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
-position = Vector2(573, 283)
+[node name="Castle" parent="Entities" unique_id=1816759750 instance=ExtResource("13_7nbq1")]
+position = Vector2(105.831055, 411.39838)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_htg8p")])
 
+[node name="City" parent="Entities" unique_id=1774177421 instance=ExtResource("14_exi56")]
+position = Vector2(793.83105, 369.39838)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim")])
+
+[node name="MageTower" parent="Entities" unique_id=1262175944 instance=ExtResource("15_7t8sx")]
+position = Vector2(328.83105, 384.39838)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
+
+[node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
+position = Vector2(546.83105, 372.39838)
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
+
 [node name="ResourceStorage" parent="Entities" unique_id=637124255 instance=ExtResource("20_resource_storage")]
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcvim"), SubResource("Resource_fnkle"), SubResource("Resource_wr3wg"), SubResource("Resource_6xvgv"), SubResource("Resource_8lpvs")])
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv"), SubResource("Resource_8lpvs"), SubResource("Resource_x6jpx"), SubResource("Resource_sjh24"), SubResource("Resource_k5jl5")])
 
-[node name="ResourceViews" type="HBoxContainer" parent="Entities" unique_id=1681811253]
-offset_left = 290.0
-offset_top = 30.0
-offset_right = 870.0
-offset_bottom = 70.0
-mouse_filter = 2
-theme_override_constants/separation = 20
-
-[node name="FoodView" parent="Entities/ResourceViews" unique_id=1665693487 instance=ExtResource("18_resource_view")]
-layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_x6jpx")])
-
-[node name="WoodView" parent="Entities/ResourceViews" unique_id=1551522710 instance=ExtResource("18_resource_view")]
-layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_sjh24")])
-
-[node name="WeaponsView" parent="Entities/ResourceViews" unique_id=1066766489 instance=ExtResource("18_resource_view")]
-layout_mode = 2
-component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_k5jl5")])
-
-[node name="ManaView" parent="Entities/ResourceViews" unique_id=1455940605 instance=ExtResource("18_resource_view")]
-layout_mode = 2
+[node name="FoodView" parent="Entities" unique_id=1665693487 instance=ExtResource("18_resource_view")]
+offset_left = 132.0
+offset_top = 32.0
+offset_right = 270.0
+offset_bottom = 86.0
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nqk4g")])
 
-[node name="GoldView" parent="Entities/ResourceViews" unique_id=40109464 instance=ExtResource("18_resource_view")]
-layout_mode = 2
+[node name="WoodView" parent="Entities" unique_id=1551522710 instance=ExtResource("18_resource_view")]
+offset_left = 339.0
+offset_top = 30.0
+offset_right = 459.0
+offset_bottom = 70.0
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fh6x0")])
 
+[node name="WeaponsView" parent="Entities" unique_id=1066766489 instance=ExtResource("18_resource_view")]
+offset_left = 528.0
+offset_top = 29.0
+offset_right = 648.0
+offset_bottom = 69.0
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_j0obb")])
+
+[node name="ManaView" parent="Entities" unique_id=1455940605 instance=ExtResource("18_resource_view")]
+offset_left = 723.0
+offset_top = 31.0
+offset_right = 843.0
+offset_bottom = 71.0
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nfavm")])
+
+[node name="GoldView" parent="Entities" unique_id=40109464 instance=ExtResource("18_resource_view")]
+offset_left = 919.0
+offset_top = 31.0
+offset_right = 1039.0
+offset_bottom = 71.0
+component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcn4n")])
+
 [node name="LocationEventView" parent="." unique_id=1116405939 instance=ExtResource("26_event_view")]
-offset_left = 140.0
-offset_top = 610.0
-offset_right = 980.0
-offset_bottom = 750.0
+offset_left = 10.0
+offset_top = 813.0
+offset_right = 1067.0
+offset_bottom = 921.0
 
 [node name="Systems" type="Node2D" parent="." unique_id=1608136620]
 position = Vector2(364, 203)
@@ -297,6 +317,10 @@ group = &"process"
 
 [node name="ResourceTrendSystem" type="Node" parent="Systems/process" unique_id=1079708541]
 script = ExtResource("38_resource_trend")
+group = &"process"
+
+[node name="PinEffectPreviewSystem" type="Node" parent="Systems/process" unique_id=1709687650]
+script = ExtResource("41_pin_effect_preview")
 group = &"process"
 
 [node name="cleanup" type="Node" parent="Systems" unique_id=2085096247]

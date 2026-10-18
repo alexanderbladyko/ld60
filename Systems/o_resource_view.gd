@@ -38,10 +38,12 @@ func _refresh_view(view: Entity, changed: Entity = null, excluded: Entity = null
 	var binding: C_ResourceView = view.get_component(C_ResourceView)
 	var resource := _find_source(binding, changed, excluded)
 	var title := view.get_node("Header/ResourceName") as Label
+	var icon := view.get_node("Header/Icon") as TextureRect
 	var counter := view.get_node("Header/Amount") as Label
 	var bar := view.get_node("ProgressBar") as ProgressBar
 	var control := view.get_node(".") as Control
 	title.text = Enums.ResourceType.keys()[binding.resource].capitalize()
+	icon.texture = ResourceIcons.TEXTURES[binding.resource]
 	if resource == null:
 		bar.value = 0.0
 		bar.max_value = 1.0

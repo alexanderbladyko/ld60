@@ -1,23 +1,15 @@
 [gd_scene format=3 uid="uid://b64t3yejfotgy"]
 
-[sub_resource type="StyleBoxFlat" id="PanelStyle"]
-bg_color = Color(0.08, 0.075, 0.065, 0.96)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.78, 0.65, 0.4, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="1_mtsws"]
+[ext_resource type="FontFile" uid="uid://d0vmy5yq82h2" path="res://Fonts/Papernotes.ttf" id="2_k8k0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_631el"]
 
 [node name="LocationEventView" type="PanelContainer" unique_id=1296440908]
-visible = false
 offset_right = 840.0
-offset_bottom = 140.0
+offset_bottom = 108.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("PanelStyle")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_631el")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=251021098]
 layout_mode = 2
@@ -32,16 +24,29 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 6
 
-[node name="LocationName" type="Label" parent="Margin/Content" unique_id=1432243588]
+[node name="Hbox" type="HBoxContainer" parent="Margin/Content" unique_id=1454997798]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Margin/Content/Hbox" unique_id=826318725]
+layout_mode = 2
+
+[node name="LocationName" type="Label" parent="Margin/Content/Hbox" unique_id=1432243588]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.88, 0.6, 1)
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("1_mtsws")
+theme_override_font_sizes/font_size = 24
+text = "Test"
 
-[node name="Message" type="Label" parent="Margin/Content" unique_id=678730285]
+[node name="Message" type="Label" parent="Margin/Content/Hbox" unique_id=678730285]
 custom_minimum_size = Vector2(0, 38)
+custom_maximum_size = Vector2(600, -1)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_k8k0j")
+theme_override_font_sizes/font_size = 20
+text = "Message"
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="TimeLeft" type="Label" parent="Margin/Content" unique_id=1961204026]

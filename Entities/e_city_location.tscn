@@ -3,14 +3,31 @@
 [ext_resource type="PackedScene" uid="uid://ci47mjumr8sqp" path="res://Entities/e_base_location.tscn" id="1_base"]
 [ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="2_component"]
 [ext_resource type="Script" uid="uid://dryxapum6y7pr" path="res://Components/c_location.gd" id="3_location"]
+[ext_resource type="Texture2D" uid="uid://sr53j2ly7iyw" path="res://Assets/Locations/city.png" id="4_qnmbr"]
 
-[sub_resource type="Resource" id="Resource_7gb6q"]
+[sub_resource type="Resource" id="Resource_qnmbr"]
 resource_local_to_scene = true
 script = ExtResource("3_location")
 location = 4
 
 [node name="City" unique_id=319407848 instance=ExtResource("1_base")]
-component_resources = Array[ExtResource("2_component")]([SubResource("Resource_7gb6q")])
+component_resources = Array[ExtResource("2_component")]([SubResource("Resource_qnmbr")])
 
-[node name="Name" parent="." index="1" unique_id=2005404104]
+[node name="TextureRect" parent="." index="0" unique_id=843454972]
+offset_left = -119.0
+offset_top = -103.0
+offset_right = 374.0
+offset_bottom = 265.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_qnmbr")
+
+[node name="Sign" parent="." index="1" unique_id=922540351]
+position = Vector2(5.603977, 90.75)
+
+[node name="Name" parent="." index="2" unique_id=2005404104]
+offset_left = -16.39603
+offset_top = 70.75
+offset_right = 23.60397
+offset_bottom = 108.75
 text = "City"
+metadata/_edit_use_anchors_ = true

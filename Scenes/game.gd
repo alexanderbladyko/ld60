@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var play_area: Rect2 = Rect2(60.0, 20.0, 1040.0, 760.0)
+@export var play_area: Rect2 = Rect2(60.0, 20.0, 1040.0, 840.0)
 @export_range(0.0, 200.0) var screen_margin: float = 32.0
 
 @onready var camera: Camera2D = $Camera2D

@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene format=3 uid="uid://i40n2olatvhk"]
 
-[ext_resource type="Script" path="res://Entities/e_location_event.gd" id="1_entity"]
-[ext_resource type="Script" path="res://Components/c_location_event.gd" id="2_event"]
-[ext_resource type="Script" path="res://addons/gecs/ecs/component.gd" id="3_component"]
+[ext_resource type="Script" uid="uid://bsmagg4lrioy6" path="res://Entities/e_location_event.gd" id="1_entity"]
+[ext_resource type="Script" uid="uid://cbhqqsraqa21d" path="res://Components/c_location_event.gd" id="2_event"]
+[ext_resource type="Script" uid="uid://b6k13gc2m4e5s" path="res://addons/gecs/ecs/component.gd" id="3_component"]
 
 [sub_resource type="Resource" id="Event"]
 resource_local_to_scene = true
 script = ExtResource("2_event")
 
-[node name="LocationEvent" type="Node"]
+[node name="LocationEvent" type="Node" unique_id=597719635]
 script = ExtResource("1_entity")
 component_resources = Array[ExtResource("3_component")]([SubResource("Event")])
