@@ -15,6 +15,7 @@ component_resources = Array[ExtResource("3_component")]([SubResource("Resource_c
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1432838169]
 z_index = 1000
+points = PackedVector2Array(827, 418, 398, 446)
 width = 12.0
 default_color = Color(1, 0.039215688, 0.16470589, 1)
 begin_cap_mode = 2

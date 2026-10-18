@@ -1,3 +1,3 @@
 @tool
 class_name ResourceView
-extends Entity
+extends "res://Scenes/location_resource.gd"

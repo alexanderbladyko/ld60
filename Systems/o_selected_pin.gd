@@ -3,6 +3,15 @@ extends Observer
 
 const CABLE_SCENE: PackedScene = preload("res://Entities/e_cable.tscn")
 
+@export var cable_colors: Array[Color] = [
+	Color("#ef4444"),
+	Color("#2563eb"),
+	Color("#65a30d"),
+	Color("#eab308"),
+	Color("#7c3aed"),
+	Color("#ea580c"),
+]
+
 
 func query() -> QueryBuilder:
 	return q.with_all([C_Pin, C_SelectedPin]).on_added().on_removed()
@@ -15,6 +24,8 @@ func each(event: Variant, pin: Entity, payload: Variant = null) -> void:
 	if event == Observer.Event.ADDED:
 		var cable_entity := CABLE_SCENE.instantiate() as Entity
 		var cable := C_Cable.new()
+		if not cable_colors.is_empty():
+			cable.color = cable_colors.pick_random()
 		cable.source = pin
 		cable.cursor_position = (pin.get_node("CableAnchor") as Node2D).global_position
 		cable_entity.add_component(cable)

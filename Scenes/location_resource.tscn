@@ -1,14 +1,32 @@
 [gd_scene format=3 uid="uid://57kkmumub3qr"]
 
 [ext_resource type="FontFile" uid="uid://bmhvk7lvq55km" path="res://Fonts/Enchanted Land.otf" id="1_1xl1h"]
+[ext_resource type="Script" path="res://Scenes/location_resource.gd" id="2_colors"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dm0af"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_background"]
+resource_local_to_scene = true
+bg_color = Color(0.16, 0.14, 0.12, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fill"]
+resource_local_to_scene = true
+bg_color = Color(0.35, 0.68, 0.3, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="LocationResource" type="VBoxContainer" unique_id=687029359]
 offset_right = 100.0
 offset_bottom = 40.0
 mouse_filter = 2
 theme_override_constants/separation = 4
+script = ExtResource("2_colors")
 
 [node name="Header" type="HBoxContainer" parent="." unique_id=714559240]
 layout_mode = 2
@@ -47,5 +65,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_background")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
 step = 0.0
 show_percentage = false

@@ -1,6 +1,14 @@
 class_name LocationEventObserver
 extends Observer
 
+const LOCATION_COLORS: Dictionary = {
+	Enums.LocationType.DRAGON_CAVE: Color("#65a30d"),
+	Enums.LocationType.CASTLE: Color("#2563eb"),
+	Enums.LocationType.MAGE_TOWER: Color("#7c3aed"),
+	Enums.LocationType.VILLAGE: Color("#eab308"),
+	Enums.LocationType.CITY: Color("#ef4444"),
+}
+
 @export_node_path("PanelContainer") var event_view: NodePath
 
 
@@ -60,6 +68,7 @@ func _refresh_view(current: Entity) -> void:
 	var data: C_LocationEvent = current.get_component(C_LocationEvent)
 	var lifetime: C_Lifetime = current.get_component(C_Lifetime)
 	title.text = Enums.LocationType.keys()[data.definition.location].capitalize()
+	title.add_theme_color_override("font_color", LOCATION_COLORS[data.definition.location])
 	message.text = data.definition.message
 	time_left.text = "%.1f s" % lifetime.remaining
 	bar.max_value = maxf(data.definition.effect_duration, 0.000001)

@@ -29,5 +29,6 @@ offset_left = -16.39603
 offset_top = 70.75
 offset_right = 23.60397
 offset_bottom = 108.75
+theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
 text = "City"
 metadata/_edit_use_anchors_ = true

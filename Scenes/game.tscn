@@ -178,7 +178,7 @@ position = Vector2(1016, 584)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_v2cs8")])
 
 [node name="DragonCave" parent="Entities" unique_id=25593624 instance=ExtResource("3_nnt18")]
-position = Vector2(1050.831, 372.39838)
+position = Vector2(1040, 362)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_32sfa")])
 
 [node name="MageTowerPin" parent="Entities" unique_id=635356073 instance=ExtResource("8_1phco")]
@@ -202,17 +202,19 @@ position = Vector2(328.83105, 384.39838)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fnkle")])
 
 [node name="Village" parent="Entities" unique_id=1039947959 instance=ExtResource("16_mg4q0")]
-position = Vector2(546.83105, 372.39838)
+position = Vector2(555, 386)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_wr3wg")])
 
 [node name="ResourceStorage" parent="Entities" unique_id=637124255 instance=ExtResource("20_resource_storage")]
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_6xvgv"), SubResource("Resource_8lpvs"), SubResource("Resource_x6jpx"), SubResource("Resource_sjh24"), SubResource("Resource_k5jl5")])
 
 [node name="FoodView" parent="Entities" unique_id=1665693487 instance=ExtResource("18_resource_view")]
-offset_left = 132.0
-offset_top = 32.0
-offset_right = 270.0
-offset_bottom = 86.0
+offset_left = 502.0
+offset_top = 43.0
+offset_right = 640.0
+offset_bottom = 97.0
+fill_color = Color(0.9882353, 0.827451, 0.3019608, 1)
+background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nqk4g")])
 
 [node name="WoodView" parent="Entities" unique_id=1551522710 instance=ExtResource("18_resource_view")]
@@ -220,13 +222,17 @@ offset_left = 339.0
 offset_top = 30.0
 offset_right = 459.0
 offset_bottom = 70.0
+fill_color = Color(0.4862745, 0.1764706, 0.07058824, 1)
+background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_fh6x0")])
 
 [node name="WeaponsView" parent="Entities" unique_id=1066766489 instance=ExtResource("18_resource_view")]
-offset_left = 528.0
-offset_top = 29.0
-offset_right = 648.0
-offset_bottom = 69.0
+offset_left = 135.0
+offset_top = 34.0
+offset_right = 255.0
+offset_bottom = 88.0
+fill_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_j0obb")])
 
 [node name="ManaView" parent="Entities" unique_id=1455940605 instance=ExtResource("18_resource_view")]
@@ -234,6 +240,8 @@ offset_left = 723.0
 offset_top = 31.0
 offset_right = 843.0
 offset_bottom = 71.0
+fill_color = Color(0.007843138, 0.5176471, 0.78039217, 1)
+background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_nfavm")])
 
 [node name="GoldView" parent="Entities" unique_id=40109464 instance=ExtResource("18_resource_view")]
@@ -241,13 +249,15 @@ offset_left = 919.0
 offset_top = 31.0
 offset_right = 1039.0
 offset_bottom = 71.0
+fill_color = Color(0.7921569, 0.5411765, 0.015686275, 1)
+background_color = Color(0.03529412, 0.03529412, 0.043137256, 1)
 component_resources = Array[ExtResource("4_v158k")]([SubResource("Resource_jcn4n")])
 
 [node name="LocationEventView" parent="." unique_id=1116405939 instance=ExtResource("26_event_view")]
-offset_left = 10.0
-offset_top = 813.0
-offset_right = 1067.0
-offset_bottom = 921.0
+offset_left = 9.0
+offset_top = 803.0
+offset_right = 1066.0
+offset_bottom = 912.0
 
 [node name="Systems" type="Node2D" parent="." unique_id=1608136620]
 position = Vector2(364, 203)

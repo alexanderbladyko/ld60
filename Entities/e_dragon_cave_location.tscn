@@ -29,4 +29,5 @@ offset_left = -59.0
 offset_top = 79.0
 offset_right = 65.0
 offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.39607844, 0.6392157, 0.050980393, 1)
 text = "Dragon's Cave"
