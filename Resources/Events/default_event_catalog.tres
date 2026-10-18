@@ -225,6 +225,234 @@ options = Dictionary[int, ExtResource("3_option")]({
 })
 metadata/_custom_type_script = "uid://by1hndcj73s4l"
 
+[sub_resource type="Resource" id="Resource_d27lm"]
+script = ExtResource("3_option")
+message = "Education, education, education & war!"
+resource_deltas = Dictionary[int, float]({
+1: 10.0,
+2: 5.0,
+4: -2.0
+})
+cooldown_seconds = 10.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_jxi8j"]
+script = ExtResource("3_option")
+message = "You're joking, right?"
+resource_deltas = Dictionary[int, float]({
+0: -5.0,
+1: 10.0,
+4: -3.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_yinm2"]
+script = ExtResource("3_option")
+message = "Middle class!"
+resource_deltas = Dictionary[int, float]({
+1: 5.0,
+2: 3.0
+})
+cooldown_seconds = 30.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_q4yot"]
+script = ExtResource("3_option")
+message = "Burn them all! Haha!"
+resource_deltas = Dictionary[int, float]({
+1: -10.0,
+3: -10.0,
+4: 10.0
+})
+cooldown_seconds = 25.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_0j036"]
+script = ExtResource("2_definition")
+location = 4
+message = "Poor people are too wealthy, rich people are unhappy!"
+cooldown_seconds = 50.0
+effect_duration = 20.0
+effect = Dictionary[int, float]({
+0: -3.0
+})
+effect_period = 3.0
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_d27lm"),
+1: SubResource("Resource_jxi8j"),
+2: SubResource("Resource_yinm2"),
+3: SubResource("Resource_q4yot")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
+[sub_resource type="Resource" id="Resource_d0ny1"]
+script = ExtResource("3_option")
+message = "Yes, sir!"
+resource_deltas = Dictionary[int, float]({
+0: -2.0,
+2: 20.0,
+3: 5.0
+})
+cooldown_seconds = 15.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_h82vs"]
+script = ExtResource("3_option")
+message = "Steve, it's your turn!"
+resource_deltas = Dictionary[int, float]({
+2: 10.0,
+4: -4.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_jdg5n"]
+script = ExtResource("3_option")
+message = "Me too!"
+resource_deltas = Dictionary[int, float]({
+0: -10.0,
+3: 5.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_fh8un"]
+script = ExtResource("3_option")
+message = "Let's see what we can do..."
+resource_deltas = Dictionary[int, float]({
+0: -10.0,
+1: 10.0,
+4: -5.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_bwii0"]
+script = ExtResource("2_definition")
+event_id = &"castle_croco"
+message = "Someone has to feed that croco in the river!"
+cooldown_seconds = 10.0
+effect_duration = 5.0
+effect_period = 2.0
+options = Dictionary[int, ExtResource("3_option")]({
+1: SubResource("Resource_d0ny1"),
+2: SubResource("Resource_h82vs"),
+3: SubResource("Resource_jdg5n"),
+4: SubResource("Resource_fh8un")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
+[sub_resource type="Resource" id="Resource_uiso3"]
+script = ExtResource("3_option")
+message = "We are the champions! No time for losers!"
+resource_deltas = Dictionary[int, float]({
+0: 5.0,
+2: -2.0,
+4: 10.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_34tev"]
+script = ExtResource("3_option")
+message = "Steve will participate!"
+resource_deltas = Dictionary[int, float]({
+1: 10.0,
+3: -5.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_t65nc"]
+script = ExtResource("3_option")
+message = "Potato!"
+resource_deltas = Dictionary[int, float]({
+1: -10.0,
+4: 15.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_roc6h"]
+script = ExtResource("3_option")
+message = "In this economy?"
+resource_deltas = Dictionary[int, float]({
+3: -10.0,
+4: -10.0
+})
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_7lcyc"]
+script = ExtResource("2_definition")
+event_id = &"village_olympics"
+location = 1
+message = "Annual potato games are officially on!!!"
+cooldown_seconds = 20.0
+effect = Dictionary[int, float]({
+0: -1.0
+})
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_uiso3"),
+2: SubResource("Resource_34tev"),
+3: SubResource("Resource_t65nc"),
+4: SubResource("Resource_roc6h")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
+[sub_resource type="Resource" id="Resource_ohexe"]
+script = ExtResource("3_option")
+message = "We send our best warrior to fight that!"
+resource_deltas = Dictionary[int, float]({
+0: 4.0,
+1: 30.0,
+2: -1.0
+})
+cooldown_seconds = 30.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_jq4kc"]
+script = ExtResource("3_option")
+message = "Steve, please don't die!"
+resource_deltas = Dictionary[int, float]({
+0: -5.0,
+1: 10.0,
+4: 3.0
+})
+cooldown_seconds = 5.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_6l3in"]
+script = ExtResource("3_option")
+message = "I have paws!!!"
+resource_deltas = Dictionary[int, float]({
+1: -10.0,
+3: 5.0,
+4: -10.0
+})
+cooldown_seconds = 3.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_l6cgg"]
+script = ExtResource("3_option")
+message = "Steve, mommy loves you!"
+resource_deltas = Dictionary[int, float]({
+0: 3.0,
+3: 30.0,
+4: 5.0
+})
+cooldown_seconds = 30.0
+metadata/_custom_type_script = "uid://13t14ftl7e0y"
+
+[sub_resource type="Resource" id="Resource_etabg"]
+script = ExtResource("2_definition")
+event_id = &"mage_steve"
+location = 2
+message = "Steve has a hangnail, send a doctor"
+effect = Dictionary[int, float]({
+3: -1.0
+})
+options = Dictionary[int, ExtResource("3_option")]({
+0: SubResource("Resource_ohexe"),
+1: SubResource("Resource_jq4kc"),
+3: SubResource("Resource_6l3in"),
+4: SubResource("Resource_l6cgg")
+})
+metadata/_custom_type_script = "uid://by1hndcj73s4l"
+
 [resource]
 script = ExtResource("1_catalog")
-events = Array[ExtResource("2_definition")]([SubResource("castle_gate"), SubResource("Resource_d33pv"), SubResource("Resource_eg6ko"), SubResource("Resource_1opkm")])
+events = Array[ExtResource("2_definition")]([SubResource("castle_gate"), SubResource("Resource_d33pv"), SubResource("Resource_eg6ko"), SubResource("Resource_1opkm"), SubResource("Resource_0j036"), SubResource("Resource_bwii0"), SubResource("Resource_7lcyc"), SubResource("Resource_etabg")])
